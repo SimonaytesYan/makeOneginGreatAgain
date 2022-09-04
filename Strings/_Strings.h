@@ -11,7 +11,7 @@ char *_strcpy(char *to, const char* from);
 
 char *_strncpy(char *to, const char* from, int n);
 
-char *_strcat(char *to, char *from);
+char *_strcat(char *to, const char *from);
 
 char *_strncat(char *to, char* from, int n);
 
@@ -19,7 +19,7 @@ int  _strcmp(void *str1, void *str2);
 
 char  _strncmp(const char * s1, const char* s2, int n);
 
-char *_strchr(char * str, char c);
+char *_strchr(const char * str, char c);
 
 char *_strnchr(char *str, char c, int maxLen);
 
