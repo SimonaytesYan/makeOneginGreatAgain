@@ -166,7 +166,7 @@ char  _strncmp(const char * s1, const char* s2, int n)
 {
     int index = 0;
 
-    while (s1[index] && s2[index])
+    while (s1[index] && s2[index] && index < n - 1)
     {
         if (s1[index] > s2[index])
             return 1;
@@ -177,7 +177,7 @@ char  _strncmp(const char * s1, const char* s2, int n)
     }
     
 
-    return s1[n] - s2[n];
+    return s1[index] - s2[index];
 }
 
 void _puts(const char *str, FILE *fp)

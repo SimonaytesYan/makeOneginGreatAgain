@@ -184,3 +184,114 @@ void test_getline()
     printf("size = %d\n", _getline(str, 100, stdout));
     printf("%s\n", str);
 }
+
+
+void test_strncmp()
+{
+    printf("\n""Start test _strncmp()\n");
+
+    char f[100] = "000001";
+    char s[100] = "000000";
+    printf("TEST 1: ");
+
+    int ans = _strncmp(f, s, 6); 
+    if (ans <= 0)
+    {
+        printf("FAILED\n");
+        printf("f       = <%s>\n", f);
+        printf("s       = <%s>\n", s);
+        printf("_strcmp = %d\n", ans);
+    }
+    else
+        printf("PASSED\n");
+
+    printf("TEST 2: ");
+    _strcpy(f, "0000");
+    _strcpy(s, "00000");
+    
+    ans = _strncmp(f, s, 5);
+    if (ans >= 0)
+    {
+        printf("FAILED\n");
+        printf("f       = <%s>\n", f);
+        printf("s       = <%s>\n", s);
+        printf("_strcmp = %d\n", ans);
+    }
+    else
+        printf("PASSED\n");
+    
+    printf("TEST 3: ");
+    _strcpy(f, "0000");
+    _strcpy(s, "0000");
+    
+    ans = _strncmp(f, s, 10);
+    if (ans != 0)
+    {
+        printf("FAILED\n");
+        printf("f       = <%s>\n", f);
+        printf("s       = <%s>\n", s);
+        printf("_strcmp = %d\n", ans);
+    }
+    else
+        printf("PASSED\n");
+    
+    printf("TEST 4: ");
+    _strcpy(f, "00000");
+    _strcpy(s, "0000");
+    
+    ans = _strncmp(f, s, 10);
+    if (ans <= 0)
+    {
+        printf("FAILED\n");
+        printf("f       = <%s>\n", f);
+        printf("s       = <%s>\n", s);
+        printf("_strcmp = %d\n", ans);
+    }
+    else
+        printf("PASSED\n");
+    
+    printf("TEST 5: ");
+    _strcpy(f, "000001");
+    _strcpy(s, "00000");
+    
+    ans = _strncmp(f, s, 5);
+    if (ans != 0)
+    {
+        printf("FAILED\n");
+        printf("f       = <%s>\n", f);
+        printf("s       = <%s>\n", s);
+        printf("_strcmp = %d\n", ans);
+    }
+    else
+        printf("PASSED\n");
+    
+    printf("TEST 6: ");
+    _strcpy(f, "00000");
+    _strcpy(s, "000001");
+    
+    ans = _strncmp(f, s, 5);
+    if (ans != 0)
+    {
+        printf("FAILED\n");
+        printf("f       = <%s>\n", f);
+        printf("s       = <%s>\n", s);
+        printf("_strcmp = %d\n", ans);
+    }
+    else
+        printf("PASSED\n");
+    
+    printf("TEST 7: ");
+    _strcpy(f, "00001");
+    _strcpy(s, "000011");
+    
+    ans = _strncmp(f, s, 5);
+    if (ans != 0)
+    {
+        printf("FAILED\n");
+        printf("f       = <%s>\n", f);
+        printf("s       = <%s>\n", s);
+        printf("_strcmp = %d\n", ans);
+    }
+    else
+        printf("PASSED\n");
+}
