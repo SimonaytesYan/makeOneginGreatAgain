@@ -8,15 +8,65 @@ void test_strlen()
 {
     char f[] = "123456789";
 
-    printf("<%s> size = %d\n",f, _strlen(f));
+    printf("TEST 1: ");
 
-    printf("<> size = %d\n", _strlen(""));
+    int ans = _strlen(f);
+    if (ans != 9)
+    {
+        printf("FAILED\n");
+        printf("f   = <%s>\n", f);
+        printf("Len = %d\n", ans);
+    }
+    else
+        printf("PASSED\n");
+    
+    printf("TEST 2: ");
+    
+    ans = _strlen("");
+    if (ans != 0)
+    {
+        printf("FAILED\n");
+        printf("f   = <>\n");
+        printf("Len = %d\n", ans);
+    }
+    else
+        printf("PASSED\n");
 
-    printf("<1> size = %d\n", _strlen("1"));
+    printf("TEST 3: ");
+    
+    ans = _strlen("1");
+    if (ans != 1)
+    {
+        printf("FAILED\n");
+        printf("f   = <1>\n");
+        printf("Len = %d\n", ans);
+    }
+    else
+        printf("PASSED\n");
 
-    printf("<11> size = %d\n", _strlen("11"));
+    printf("TEST 4: ");
+    
+    ans = _strlen("11");
+    if (ans != 2)
+    {
+        printf("FAILED\n");
+        printf("f   = <11>\n", f);
+        printf("Len = %d\n", ans);
+    }
+    else
+        printf("PASSED\n");
 
-    printf("<111> size = %d\n", _strlen("111"));
+    printf("TEST 5: ");
+    
+    ans = _strlen("111");
+    if (ans != 3)
+    {
+        printf("FAILED\n");
+        printf("f   = <111>\n");
+        printf("Len = %d\n", ans);
+    }
+    else
+        printf("PASSED\n");
 }
 
 void test_strcpy() 
@@ -184,7 +234,6 @@ void test_getline()
     printf("size = %d\n", _getline(str, 100, stdout));
     printf("%s\n", str);
 }
-
 
 void test_strncmp()
 {

@@ -2,5 +2,5 @@
 
 int main()
 {
-    test_strncmp();
+    test_strlen();
 }
