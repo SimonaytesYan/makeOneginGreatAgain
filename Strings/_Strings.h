@@ -17,6 +17,8 @@ char *_strncat(char *to, char* from, int n);
 
 int  _strcmp(void *str1, void *str2);
 
+int  _strcmp_reverse(void *str1, void *str2);
+
 char  _strncmp(const char * s1, const char* s2, int n);
 
 char *_strchr(const char * str, char c);
@@ -33,5 +35,6 @@ int   _gettext(char *text, int size, FILE *fp);
 
 void  _getlines_from_text(const char **lines, char *text);
 
+void _put_text_to_file(const char *text, FILE *fp, int N);
 
 #endif

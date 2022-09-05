@@ -88,7 +88,7 @@ void test_qsort()
         printf("\n");
 
         QSORT(arr, 10, sizeof(int), comp);
-        
+
         bool sorted = true;
         for(int i = 1; i < 10; i++)
             if (arr[i - 1] > arr[i])
@@ -212,25 +212,19 @@ void test_swap()
 int main()
 {   
     init_console();
-
-    test_qsort();
-
-    abort();
     
     struct stat buff = {};
     stat(READ_FROM, &buff);
+    int text_size = buff.st_size;
 
-    char* work_text              = (char*)calloc(buff.st_size, 1);
-    char* correct_text_to_output = (char*)calloc(buff.st_size, 1);
+    char* work_text              = (char*)calloc(text_size, 1);
 
     assert(work_text != NULL);
-    assert(correct_text_to_output != NULL);
 
     FILE *fp = fopen(READ_FROM, "r");
     assert(fp != NULL);
 
-    int numberLines = _gettext(work_text, buff.st_size, fp);
-    _strcpy(correct_text_to_output, work_text);
+    int numberLines = _gettext(work_text, text_size, fp);
 
     fclose(fp);
 
@@ -243,22 +237,26 @@ int main()
     assert(ofp);
 
     printf("Array was got\n");
-    QSORT(arrayLines, numberLines, sizeof(char *) , _strcmp);
+    QSORT(arrayLines, numberLines, sizeof(char*) , _strcmp);
     printf("Array sorted\n");
 
     for(int i = 0; i < numberLines; i++)
-    {
         _puts(arrayLines[i], ofp);
-    }
+        
     _puts("\n\n", ofp);
     printf("Array printed\n");
 
-    _puts(correct_text_to_output, ofp);
+    _put_text_to_file(work_text, ofp, text_size);
     printf("Original array printed\n");
 
-    fclose(ofp);
+    //QSORT(arrayLines, numberLines, sizeof(char*), _strcmp_reverse);
+    //printf("Array sorted reversed\n");
+
+    //for(int i = 0; i < numberLines; i++)
+    //    _puts(arrayLines[i], ofp);
+
+    //fclose(ofp);
 
     free(arrayLines);
-    free(correct_text_to_output);
     free(work_text);
 }

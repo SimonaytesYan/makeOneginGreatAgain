@@ -344,3 +344,87 @@ void test_strncmp()
     else
         printf("PASSED\n");
 }
+
+
+void test_strcmp_reverse()
+{
+    printf("TEST 1: ");
+    char f[50] = "10001";
+    char s[50] = "11000";
+
+    int ans = _strcmp_reverse(f, s);
+    
+    if (ans <= 0)
+    {
+        printf("FAILED\n");
+        printf("f         = <%s>\n", f);
+        printf("s         = <%s>\n", s);
+        printf("_strcmp_r = %d\n", ans);
+    }
+    else
+        printf("PASSED\n");
+
+    printf("TEST 2: ");
+    _strcpy(f, "10001");
+    _strcpy(s, "000011");
+
+    ans = _strcmp_reverse(f, s);
+    
+    if (ans >= 0)
+    {
+        printf("FAILED\n");
+        printf("f         = <%s>\n", f);
+        printf("s         = <%s>\n", s);
+        printf("_strcmp_r = %d\n", ans);
+    }
+    else
+        printf("PASSED\n");
+    
+    printf("TEST 3: ");
+    _strcpy(f, "1000");
+    _strcpy(s, "0000");
+
+    ans = _strcmp_reverse(f, s);
+    
+    if (ans <= 0)
+    {
+        printf("FAILED\n");
+        printf("f         = <%s>\n", f);
+        printf("s         = <%s>\n", s);
+        printf("_strcmp_r = %d\n", ans);
+    }
+    else
+        printf("PASSED\n");
+
+    printf("TEST 4: ");
+    _strcpy(f, "0000");
+    _strcpy(s, "0000");
+
+    ans = _strcmp_reverse(f, s);
+    
+    if (ans != 0)
+    {
+        printf("FAILED\n");
+        printf("f         = <%s>\n", f);
+        printf("s         = <%s>\n", s);
+        printf("_strcmp_r = %d\n", ans);
+    }
+    else
+        printf("PASSED\n");
+
+    printf("TEST 5: ");
+    _strcpy(f, "00,,  00");
+    _strcpy(s, "0 00  0");
+
+    ans = _strcmp_reverse(f, s);
+    
+    if (ans != 0)
+    {
+        printf("FAILED\n");
+        printf("f         = <%s>\n", f);
+        printf("s         = <%s>\n", s);
+        printf("_strcmp_r = %d\n", ans);
+    }
+    else
+        printf("PASSED\n"); 
+}

@@ -13,9 +13,9 @@ void test_strcat();
 
 void test_strncat();    
 
-void test_strcmp();     //!
+void test_strncmp();
 
-void test_strncmp();    //!
+void test_strcmp_reverse();
 
 void test_strchr();     
 

@@ -155,10 +155,59 @@ int _strcmp(void *str1, void *str2)
 
     while (!isalnum(s1[n1]) && s1[n1] != '\0')
         n1++;
-    while (!isalnum(s1[n1]) && s2[n2] != '\0')
+    while (!isalnum(s2[n1]) && s2[n2] != '\0')
         n2++;
     
     return s1[n1] - s2[n2];
+}
+
+int _strcmp_reverse(void *str1, void *str2)
+{
+    printf("\n");
+    const char *s1 = (const char*)str1;
+    const char *s2 = (const char*)str2;
+    
+    const char *s1_start = s1;
+    const char *s2_start = s2;
+
+    while (*s1 != '\0')
+        s1++;
+    while (*s2 != '\0')
+        s2++;
+    
+    while (s1 != s1_start && s2 != s2_start)
+    {
+        if(!isalnum(*s1))
+        {
+            s1--;
+            continue;
+        }
+        if(!isalnum(*s2))
+        {
+            s2--;
+            continue;
+        }
+
+        if (*s1 > *s2)
+            return 1;
+        if (*s1 < *s2)
+            return -1;
+        s1--;
+        s2--;
+    }
+    
+    while (!isalnum(*s1) && s1 != s1_start)
+        s1++;
+    while (!isalnum(*s2) && s2 != s2_start)
+        s2++;
+    
+    if (s1 == s1_start && 
+        s2 == s2_start)
+        return *s1 - *s2;
+    else if (s1 == s1_start)
+        return -1;
+
+    return 1;
 }
 
 
@@ -174,8 +223,7 @@ char  _strncmp(const char * s1, const char* s2, int n)
             return -1;
         
         index++;
-    }
-    
+    }    
 
     return s1[index] - s2[index];
 }
@@ -266,5 +314,21 @@ void _getlines_from_text(const char **lines, char *text)
             line_num++;
         }
         n++;
+    }
+}
+
+//!----------------
+//!Puts text to file.
+//!
+//!Replace \0 to \n and writes N symbols.
+//!----------------
+void _put_text_to_file(const char *text, FILE *fp, int N)
+{
+    for(int i = 0; i < N; i++)
+    {
+        char c = text[i];
+        if (c == '\0')
+            c = '\n';
+        putc(c, fp);
     }
 }

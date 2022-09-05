@@ -2,5 +2,5 @@
 
 int main()
 {
-    test_strlen();
+    test_strcmp_reverse();
 }
