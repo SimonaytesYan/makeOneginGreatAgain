@@ -36,51 +36,47 @@ void normal_swap(void *a, void *b, size_t ElementSize)
 
 void QSORT(void * first, size_t number, int ElementSize, int (*comparator)(void *, void *))
 {
-    printf("\nStart\n");
+    //printf("\nStart\n");
     if (number <= 1)
         return;
     
-    char *l = (char *)first;
-    char *piv = ((char*)first + (number / 2) * ElementSize);
+    char *l   = (char *)first;
+    char *r   = (char *)first + (number - 1) * ElementSize;
+    char *piv = (char *)first + (number / 2) * ElementSize;
 
-    normal_swap(l, piv, ElementSize);
-    
-    for(int i = 0; i < number; i++)
+    while (l <= r)
     {
-        printf("%d ", ((int *)first)[i]);
-    }
-    printf("\n");
-
-    int left_len = 0;
-    char *last = (char*)first+ number*ElementSize;
-
-    for(char *r = (char*)first + ElementSize; r < last; r += ElementSize)
-    {
-        if (comparator(first, r) >= 0)
-        {
-            left_len++;
+        while (comparator(l, piv) < 0)
             l += ElementSize;
+        while (comparator(r, piv) > 0)
+            r -= ElementSize;
+        
+        if (l <= r)
+        {
+            if (piv == l)
+                piv = r;
+            else if (piv == r)
+                piv = l;
+            
             normal_swap(l, r, ElementSize);
+
+            l += ElementSize;
+            r -= ElementSize;
         }
     }
-    normal_swap(l, piv, ElementSize);
 
-    for(int i = 0; i < number; i++)
-    {
-        printf("%d ", ((int *)first)[i]);
-    }
-    printf("\n");
-    int k = 0;
-    scanf("%d", &k);
+    int left_length  = (r - (char*)first)/ElementSize + 1;
+    int right_length = ((char*)first + ElementSize*number - l)/ElementSize; 
+    
+    QSORT(first, left_length,  ElementSize, comparator);
+    QSORT(l,     right_length, ElementSize, comparator);
 
-    QSORT(first, left_len,          ElementSize, comparator);
-    QSORT(l,     number - left_len, ElementSize, comparator);
 }
 
 void test_qsort()
 {
     int arr[10] = {7, 4, 2, 17, 17, 19, 3, 1, 9, 18 };
-    for(int t = 0; t < 10; t++)
+    for(int t = 0; t < 1000; t++)
     {
         printf("TEST %d\n", t + 1);
 
@@ -92,7 +88,7 @@ void test_qsort()
         printf("\n");
 
         QSORT(arr, 10, sizeof(int), comp);
-
+        
         bool sorted = true;
         for(int i = 1; i < 10; i++)
             if (arr[i - 1] > arr[i])
