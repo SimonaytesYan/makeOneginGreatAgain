@@ -166,6 +166,8 @@ int _strcmp_reverse(void *str1, void *str2)
     printf("\n");
     const char *s1 = (const char*)str1;
     const char *s2 = (const char*)str2;
+    printf("<%s>\n", s1);
+    printf("<%s>\n", s2);
     
     const char *s1_start = s1;
     const char *s2_start = s2;
@@ -175,7 +177,7 @@ int _strcmp_reverse(void *str1, void *str2)
     while (*s2 != '\0')
         s2++;
     
-    while (s1 != s1_start && s2 != s2_start)
+    while (s1 >= s1_start && s2 >= s2_start)
     {
         if(!isalnum(*s1))
         {
@@ -187,7 +189,7 @@ int _strcmp_reverse(void *str1, void *str2)
             s2--;
             continue;
         }
-
+        
         if (*s1 > *s2)
             return 1;
         if (*s1 < *s2)
@@ -196,14 +198,16 @@ int _strcmp_reverse(void *str1, void *str2)
         s2--;
     }
     
-    while (!isalnum(*s1) && s1 != s1_start)
-        s1++;
-    while (!isalnum(*s2) && s2 != s2_start)
-        s2++;
-    
-    if (s1 == s1_start && 
-        s2 == s2_start)
+    while (!isalnum(*s1) && s1 >= s1_start)
+        s1--;
+    while (!isalnum(*s2) && s2 >= s2_start)
+        s2--;
+
+    if (s1 < s1_start && 
+        s2 < s2_start)
+    {
         return *s1 - *s2;
+    }
     else if (s1 == s1_start)
         return -1;
 
