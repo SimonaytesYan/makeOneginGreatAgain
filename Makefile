@@ -1,14 +1,13 @@
-all: console_set str
+all: console_set str qsort
 	g++ -c Main.cpp
-	g++ Main.o _Strings.o ConsoleSettings.o -o Start.exe
-
-test: console_set str tests_lib
-	g++ -c MainTest.cpp
-	g++ MainTest.o _Strings.o ConsoleSettings.o Tests.o -o StartTest.exe
+	g++ Main.o _Strings.o ConsoleSettings.o QSORT.o -o Start.exe
 
 clean_file: str
 	g++ CleanFile.cpp _Strings.o -o Clean.exe
 	.\Clean.exe
+
+qsort:
+	g++ -c QSORT.cpp
 
 str:
 	g++ -c Strings\_Strings.cpp
@@ -18,8 +17,3 @@ tests_lib:
 
 console_set:
 	g++ -c Console\ConsoleSettings.cpp
-
-clean_file_linux:
-	g++ -c Strings/_Strings.cpp
-	g++ CleanFile.cpp _Strings.o -o Clean.exe
-	./Clean.exe

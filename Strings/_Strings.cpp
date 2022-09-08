@@ -128,7 +128,6 @@ int _strcmp(void *str1, void *str2)
     const char * s1 = *(const char**)str1; 
     const char * s2 = *(const char**)str2;
 
-    //return strcmp(s1, s2);
     int n1 = 0;
     int n2 = 0;
     while (s1[n1] != '\0' && s2[n2] != '\0')
@@ -163,11 +162,8 @@ int _strcmp(void *str1, void *str2)
 
 int _strcmp_reverse(void *str1, void *str2)
 {
-    printf("\n");
-    const char *s1 = (const char*)str1;
-    const char *s2 = (const char*)str2;
-    printf("<%s>\n", s1);
-    printf("<%s>\n", s2);
+    const char *s1 = *(const char**)str1;
+    const char *s2 = *(const char**)str2;
     
     const char *s1_start = s1;
     const char *s2_start = s2;
@@ -189,11 +185,12 @@ int _strcmp_reverse(void *str1, void *str2)
             s2--;
             continue;
         }
-        
+
         if (*s1 > *s2)
             return 1;
         if (*s1 < *s2)
             return -1;
+
         s1--;
         s2--;
     }
@@ -205,9 +202,7 @@ int _strcmp_reverse(void *str1, void *str2)
 
     if (s1 < s1_start && 
         s2 < s2_start)
-    {
         return *s1 - *s2;
-    }
     else if (s1 == s1_start)
         return -1;
 
@@ -324,10 +319,13 @@ void _getlines_from_text(const char **lines, char *text)
 //!----------------
 //!Puts text to file.
 //!
-//!Replace \0 to \n and writes N symbols.
+//!Replaces \0 to \n and writes N symbols.
 //!----------------
 void _put_text_to_file(const char *text, FILE *fp, int N)
 {
+    while (text[N - 1] == '\0')
+        N--;
+    
     for(int i = 0; i < N; i++)
     {
         char c = text[i];
