@@ -132,29 +132,27 @@ int _strcmp(void *str1, void *str2)
     int n2 = 0;
     while (s1[n1] != '\0' && s2[n2] != '\0')
     {
-        if(!(isalnum(s1[n1])))
+        if(!(isalnum((unsigned char)s1[n1])))
         {
             n1++;
             continue;
         }
-        if(!(isalnum(s2[n2])))
+        if(!(isalnum((unsigned char)s2[n2])))
         {
             n2++;
             continue;
         }
         
-        if (s1[n1] < s2[n2])
-            return -1;
-        if (s1[n1] > s2[n2])
-            return 1;
+        if (s1[n1] != s2[n2])
+            return s1[n1] - s2[n2];
 
         n1++;
         n2++;
     }
 
-    while (!isalnum(s1[n1]) && s1[n1] != '\0')
+    while (!isalnum((unsigned char)s1[n1]) && s1[n1] != '\0')
         n1++;
-    while (!isalnum(s2[n1]) && s2[n2] != '\0')
+    while (!isalnum((unsigned char)s2[n1]) && s2[n2] != '\0')
         n2++;
     
     return s1[n1] - s2[n2];
@@ -175,29 +173,27 @@ int _strcmp_reverse(void *str1, void *str2)
     
     while (s1 >= s1_start && s2 >= s2_start)
     {
-        if(!isalnum(*s1))
+        if(!isalnum((unsigned char)(*s1)))
         {
             s1--;
             continue;
         }
-        if(!isalnum(*s2))
+        if(!isalnum((unsigned char)(*s2)))
         {
             s2--;
             continue;
         }
 
-        if (*s1 > *s2)
-            return 1;
-        if (*s1 < *s2)
-            return -1;
+        if (*s1 != *s2)
+            return *s1 - *s2;
 
         s1--;
         s2--;
     }
     
-    while (!isalnum(*s1) && s1 >= s1_start)
+    while (!isalnum((unsigned char)(*s1)) && s1 >= s1_start)
         s1--;
-    while (!isalnum(*s2) && s2 >= s2_start)
+    while (!isalnum((unsigned char)(*s2)) && s2 >= s2_start)
         s2--;
 
     if (s1 < s1_start && 
@@ -274,25 +270,29 @@ int _gettext(char *text, int size,  FILE *fp)
     assert(fp != NULL);
 
     fread(text, sizeof(char), size, fp);
+    
+    FILE * fp1 = fopen("TestGetText", "w");
+    fprintf(fp1, text);
+    fclose(fp1);
 
-    int numberLines = 0;
+    int numberLines = 1;
     int counter = 0;
 
     while (text[counter] != '\0')    
     {
         if (text[counter] == '\n')
             numberLines++;
+
         counter++;
     }
-    numberLines++;
-
-    text[counter] = '\0';
     
     return numberLines;
 }
 
 void _getlines_from_text(const char **lines, char *text)
 {    
+    //FILE *fp = fopen("TestGetText.txt", "w");
+
     int   n                = 0;
     int   line_num         = 0;
     bool  next_is_new_line = false;
@@ -310,10 +310,13 @@ void _getlines_from_text(const char **lines, char *text)
         {
             text[n] = '\0';
             next_is_new_line = true;
+            //fprintf(fp, "%s\n", lines[line_num]);
             line_num++;
         }
         n++;
     }
+
+    //fclose(fp);
 }
 
 //!----------------

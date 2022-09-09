@@ -14,8 +14,8 @@ void init_console()
 #ifndef _WIN32
 void set_console_color(int color)
 {
-    printf("Set_color_run\n");
-    printf("Color = %d\n", color);
+    //printf("Set_color_run\n");
+    //printf("Color = %d\n", color);
     printf("\x1B[0;%d;40m", color);
 }
 
