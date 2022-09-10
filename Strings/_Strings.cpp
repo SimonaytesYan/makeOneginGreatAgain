@@ -2,6 +2,7 @@
 #include <ctype.h>
 #include <assert.h>
 #include <stdio.h>
+#include <time.h>
 
 #include "_Strings.h"
 
@@ -330,4 +331,36 @@ void _put_text_to_file(const char *text, FILE *fp, int N)
             c = '\n';
         putc(c, fp);
     }
+}
+
+void _drivel_generator(const char** arrayLines, int numberLines, const char* fileName)
+{
+    FILE * fp = fopen(fileName, "w");
+    bool *used = (bool *)calloc(numberLines, 1);
+    srand(time(NULL));
+
+    for(int i = 0; i < 100; i++)
+    {
+        int index = rand()%numberLines;
+        while (used[index])
+            index = rand()%numberLines;
+
+        used[index] = true;
+        _puts(arrayLines[index], fp);
+        
+        int counter = 0;
+        int index2  = index + rand()%10 - 5;
+        while (index2 < 0 || index2 >= numberLines || used[index2])
+        {
+            int mod = rand() % 20;
+            index2 = index + rand()%mod - mod/10;
+            counter++;
+            if (counter > 100)
+                break;
+        }
+        if (counter <= 100)
+            _puts(arrayLines[index2], fp);
+    }
+
+    fclose(fp);
 }

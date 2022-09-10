@@ -3,6 +3,8 @@
 
 const int EOF_RETURN = -1; 
 
+void _drivel_generator(const char** arrayLines, int numberLines, const char* fileName);
+
 int   _strlen(const char *str);
 
 int   _strnlen(char *str, int maxLen);
