@@ -17,10 +17,12 @@ int _get_text_size(const char * file_name)
     return buff.st_size;
 }
 
-
 int main()
 {   
     init_console();
+    printf("ÿ = %d\n", (unsigned char)'ÿ');
+    printf("à = %d\n", (unsigned char)'à');
+    printf("¸ = %d\n", (unsigned char)'¸');
     
     int text_size = _get_text_size(READ_FROM);
 
@@ -38,24 +40,29 @@ int main()
     const char** arrayLines = (const char**)calloc(numberLines, sizeof(char*));
     assert(arrayLines != NULL);
 
-    _getlines_from_text(arrayLines, work_text); 
+    _getlines_from_text(arrayLines, work_text);
+    printf("Splited\n");
 
     FILE *ofp = fopen(WRITE_TO, "w");
     assert(ofp);
 
     QSORT(arrayLines, numberLines, sizeof(char*) , _strcmp);
+    printf("Sorted array\n");
 
     for(int i = 0; i < numberLines; i++)
         _puts(arrayLines[i], ofp);
+    printf("Printed sorted\n");
 
     _puts("\n\nOriginal test\n", ofp);
     _put_text_to_file(work_text, ofp, text_size);
 
     QSORT(arrayLines, numberLines, sizeof(char*), _strcmp_reverse);
+    printf("Sorted array reveresed\n");
 
     _puts("\n\nReverse sorted array\n", ofp);
     for(int i = 0; i < numberLines; i++)
         _puts(arrayLines[i], ofp);
+    printf("Reversed sorted array printed\n");
 
     fclose(ofp);
 

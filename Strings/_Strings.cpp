@@ -270,10 +270,6 @@ int _gettext(char *text, int size,  FILE *fp)
     assert(fp != NULL);
 
     fread(text, sizeof(char), size, fp);
-    
-    FILE * fp1 = fopen("TestGetText", "w");
-    fprintf(fp1, text);
-    fclose(fp1);
 
     int numberLines = 1;
     int counter = 0;
@@ -290,8 +286,7 @@ int _gettext(char *text, int size,  FILE *fp)
 }
 
 void _getlines_from_text(const char **lines, char *text)
-{    
-    //FILE *fp = fopen("TestGetText.txt", "w");
+{
 
     int   n                = 0;
     int   line_num         = 0;
@@ -306,17 +301,16 @@ void _getlines_from_text(const char **lines, char *text)
             next_is_new_line = false;
             lines[line_num] = &text[n];
         }
+        if (text[n] == '¸')
+            text[n] = 'å';
         if (text[n] == '\n')
         {
             text[n] = '\0';
             next_is_new_line = true;
-            //fprintf(fp, "%s\n", lines[line_num]);
             line_num++;
         }
         n++;
     }
-
-    //fclose(fp);
 }
 
 //!----------------
