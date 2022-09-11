@@ -3,12 +3,14 @@
 #include <assert.h>
 #include <sys\stat.h>
 
-#include "QSORT.h"
 #include "Strings\_Strings.h"
+#include "Qsort\QSORT.h"
 #include "Console\ConsoleSettings.h"
+#include "FileWork\FileWork.h"
 
-const char READ_FROM[] = "EOnegin.txt";
-const char WRITE_TO[] = "OUTPUT.txt";
+const char READ_FROM[]         = "Texts/EOnegin.txt";
+const char WRITE_TO[]          = "Texts/OUTPUT.txt";
+const char WRITE_BULLSHIT_TO[] = "Texts/bullshit.txt";
 
 int _get_text_size(const char * file_name)
 {
@@ -55,7 +57,7 @@ int main()
     for(int i = 0; i < numberLines; i++)
         _puts(arrayLines[i], ofp);
 
-    _drivel_generator(arrayLines, numberLines, "bullshit.txt");
+    _bullshit_generator(arrayLines, numberLines, WRITE_BULLSHIT_TO);
     
     fclose(ofp);
 

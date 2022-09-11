@@ -3,7 +3,7 @@
 
 const int EOF_RETURN = -1; 
 
-void _drivel_generator(const char** arrayLines, int numberLines, const char* fileName);
+void _bullshit_generator(const char** arrayLines, int numberLines, const char* fileName);
 
 int   _strlen(const char *str);
 
@@ -32,11 +32,5 @@ char *_strdup(const char *str);
 void  _puts(const char *str, FILE *fp);
 
 int   _getline(char *line, int max, FILE *fp);
-
-int   _gettext(char *text, int size, FILE *fp);
-
-void  _getlines_from_text(const char **lines, char *text);
-
-void _put_text_to_file(const char *text, FILE *fp, int N);
 
 #endif
