@@ -61,7 +61,7 @@ int main()
     printf("Reverse array sorted\n");
 
     _bullshit_generator(arrayLines, numberLines, WRITE_BULLSHIT_TO);
-    printf("Bullsit generated\n");
+    printf("Bullsit generatedd\n");
     
     fclose(ofp);
 
