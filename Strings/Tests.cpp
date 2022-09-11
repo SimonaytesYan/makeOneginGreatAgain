@@ -428,3 +428,50 @@ void test_strcmp_reverse()
     else
         printf("PASSED\n"); 
 }
+
+void test_number_syllables()
+{
+    int ans = number_syllables("Ïğèâåò");
+    printf("TEST 1: ");
+    if (ans != 2)
+    {
+        printf("FAILED\n");
+        printf("string           = <%s>\n", "Ïğèâåò");
+        printf("number_syllables = %d\n", ans);
+    }
+    else
+        printf("PASSED\n");
+
+    ans = number_syllables("ÏĞÈÂÅÒ");
+    printf("TEST 2: ");
+    if (ans != 2)
+    {
+        printf("FAILED\n");
+        printf("string           = <%s>\n", "ÏĞÈÂÅÒ");
+        printf("number_syllables = %d\n", ans);
+    }
+    else
+        printf("PASSED\n"); 
+
+    ans = number_syllables("à");
+    printf("TEST 3: ");
+    if (ans != 1)
+    {
+        printf("FAILED\n");
+        printf("string           = <%s>\n", "à");
+        printf("number_syllables = %d\n", ans);
+    }
+    else
+        printf("PASSED\n");
+
+    ans = number_syllables("ÍÈÊÎËÀÉ, à ÂÎâà: ÏÓĞÓÏÓĞÓïóìïóì");
+    printf("TEST 4: ");
+    if (ans != 12)
+    {
+        printf("FAILED\n");
+        printf("string           = <%s>\n", "Ï");
+        printf("number_syllables = %d\n", ans);
+    }
+    else
+        printf("PASSED\n");
+}

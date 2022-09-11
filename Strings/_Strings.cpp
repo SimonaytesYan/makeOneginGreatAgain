@@ -256,3 +256,43 @@ int _getline(char *line, int max, FILE* fp)
         return EOF_RETURN;
     return n;
 }
+
+bool is_russian_letter_vowel(char c)
+{
+    return (c == 'à' ||
+            c == 'å' ||
+            c == '¸' ||
+            c == 'è' ||
+            c == 'î' ||
+            c == 'ó' ||
+            c == 'û' ||
+            c == 'ý' ||
+            c == 'þ' ||
+            c == 'ÿ' ||
+            c == 'À' ||
+            c == 'Å' ||
+            c == '¨' ||
+            c == 'È' ||
+            c == 'Î' ||
+            c == 'Ó' ||
+            c == 'Û' ||
+            c == 'Ý' ||
+            c == 'Þ' ||
+            c == 'ß');
+}
+
+int number_syllables(const char * str)
+{
+    assert(str != nullptr);
+    int number = 0;
+
+    while (*str != '\0')
+    {
+        //printf("%c\n", *str);
+        if (is_russian_letter_vowel(*str))
+            number++;
+        str++;
+    }
+
+    return number;
+}

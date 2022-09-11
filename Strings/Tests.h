@@ -27,4 +27,6 @@ void test_puts();
 
 void test_getline();    
 
+void test_number_syllables();
+
 #endif

@@ -47,17 +47,21 @@ int main()
 
     for(int i = 0; i < numberLines; i++)
         _puts(arrayLines[i], ofp);
+    printf("Array sorted\n");
 
     _puts("\n\nOriginal test\n", ofp);
     _put_text_to_file(work_text, ofp, text_size);
+    printf("Original printed\n");
 
     QSORT(arrayLines, numberLines, sizeof(char*), _strcmp_reverse);
 
     _puts("\n\nReverse sorted array\n", ofp);
     for(int i = 0; i < numberLines; i++)
         _puts(arrayLines[i], ofp);
+    printf("Reverse array sorted\n");
 
     _bullshit_generator(arrayLines, numberLines, WRITE_BULLSHIT_TO);
+    printf("Bullsit generated\n");
     
     fclose(ofp);
 

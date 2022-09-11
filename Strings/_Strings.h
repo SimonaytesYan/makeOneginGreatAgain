@@ -3,8 +3,6 @@
 
 const int EOF_RETURN = -1; 
 
-void _bullshit_generator(const char** arrayLines, int numberLines, const char* fileName);
-
 int   _strlen(const char *str);
 
 int   _strnlen(char *str, int maxLen);
@@ -32,5 +30,9 @@ char *_strdup(const char *str);
 void  _puts(const char *str, FILE *fp);
 
 int   _getline(char *line, int max, FILE *fp);
+
+bool is_russian_letter_vowel(char c);
+
+int number_syllables(const char * str);
 
 #endif

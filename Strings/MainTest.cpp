@@ -2,5 +2,5 @@
 
 int main()
 {
-    test_strcmp_reverse();
+    test_number_syllables();
 }
