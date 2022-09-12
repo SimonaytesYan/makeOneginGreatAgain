@@ -1,0 +1,92 @@
+\hypertarget{_bullshit_generator_8cpp}{}\doxysection{Bullshit\+Generator/\+Bullshit\+Generator.cpp File Reference}
+\label{_bullshit_generator_8cpp}\index{BullshitGenerator/BullshitGenerator.cpp@{BullshitGenerator/BullshitGenerator.cpp}}
+
+
+This file contains functions for create Onegin stanza composed of various lines of the original work.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../\+Strings/\+\_\+\+Strings.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_bullshit_generator_8cpp_ac7da5d1b94efd08fa50647170273fd1d}{is\+\_\+rhyme\+\_\+in\+\_\+9}} (const char $\ast$s1, const char $\ast$s2)
+\item 
+bool \mbox{\hyperlink{_bullshit_generator_8cpp_a52ecb01018dfba0211886dcfecd9cc20}{is\+\_\+rhyme\+\_\+in\+\_\+8}} (const char $\ast$s1, const char $\ast$s2)
+\item 
+void \mbox{\hyperlink{_bullshit_generator_8cpp_a34ddf91c96158d51405851e43e01ca95}{get\+\_\+rhyme}} (const char $\ast$$\ast$lines, int number\+\_\+lines, bool $\ast$used, const char $\ast$$\ast$s1, const char $\ast$$\ast$s2, bool($\ast$rhyme\+\_\+comp)(const char $\ast$s1, const char $\ast$s2))
+\item 
+void \mbox{\hyperlink{_bullshit_generator_8cpp_a47f2d8aa60f91446a695ed5e6a10073a}{\+\_\+bullshit\+\_\+generator}} (const char $\ast$$\ast$array\+Lines, int number\+Lines, const char $\ast$file\+Name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{_bullshit_generator_8cpp_a28ef689ebbac7ad22213fff51f81cc1d}{rhyme\+\_\+step}} = 12
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains functions for create Onegin stanza composed of various lines of the original work. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_bullshit_generator_8cpp_a47f2d8aa60f91446a695ed5e6a10073a}\label{_bullshit_generator_8cpp_a47f2d8aa60f91446a695ed5e6a10073a}} 
+\index{BullshitGenerator.cpp@{BullshitGenerator.cpp}!\_bullshit\_generator@{\_bullshit\_generator}}
+\index{\_bullshit\_generator@{\_bullshit\_generator}!BullshitGenerator.cpp@{BullshitGenerator.cpp}}
+\doxysubsubsection{\texorpdfstring{\_bullshit\_generator()}{\_bullshit\_generator()}}
+{\footnotesize\ttfamily void \+\_\+bullshit\+\_\+generator (\begin{DoxyParamCaption}\item[{const char $\ast$$\ast$}]{array\+Lines,  }\item[{int}]{number\+Lines,  }\item[{const char $\ast$}]{file\+Name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_bullshit_generator_8cpp_a34ddf91c96158d51405851e43e01ca95}\label{_bullshit_generator_8cpp_a34ddf91c96158d51405851e43e01ca95}} 
+\index{BullshitGenerator.cpp@{BullshitGenerator.cpp}!get\_rhyme@{get\_rhyme}}
+\index{get\_rhyme@{get\_rhyme}!BullshitGenerator.cpp@{BullshitGenerator.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_rhyme()}{get\_rhyme()}}
+{\footnotesize\ttfamily void get\+\_\+rhyme (\begin{DoxyParamCaption}\item[{const char $\ast$$\ast$}]{lines,  }\item[{int}]{number\+\_\+lines,  }\item[{bool $\ast$}]{used,  }\item[{const char $\ast$$\ast$}]{s1,  }\item[{const char $\ast$$\ast$}]{s2,  }\item[{bool($\ast$)(const char $\ast$s1, const char $\ast$s2)}]{rhyme\+\_\+comp }\end{DoxyParamCaption})}
+
+\DoxyHorRuler{0}
+ Gives two rhyming lines 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em lines} & Array from lines will be selected \\
+\hline
+\mbox{\texttt{ in}}  & {\em number\+\_\+lines} & Size of lines \\
+\hline
+\mbox{\texttt{ in}}  & {\em used} & Array containing information about which lines from lines have already been used \\
+\hline
+\mbox{\texttt{ out}}  & {\em s1} & The first line of for rhyme \\
+\hline
+\mbox{\texttt{ out}}  & {\em s2} & The second line of for rhyme \\
+\hline
+\end{DoxyParams}
+\hypertarget{_bullshit_generator_8cpp_autotoc_md2}{}\doxysubsubsection{@param \mbox{[}in\mbox{]}  phyme\+\_\+comp   Function to check if two lines rhyme}\label{_bullshit_generator_8cpp_autotoc_md2}
+\mbox{\Hypertarget{_bullshit_generator_8cpp_a52ecb01018dfba0211886dcfecd9cc20}\label{_bullshit_generator_8cpp_a52ecb01018dfba0211886dcfecd9cc20}} 
+\index{BullshitGenerator.cpp@{BullshitGenerator.cpp}!is\_rhyme\_in\_8@{is\_rhyme\_in\_8}}
+\index{is\_rhyme\_in\_8@{is\_rhyme\_in\_8}!BullshitGenerator.cpp@{BullshitGenerator.cpp}}
+\doxysubsubsection{\texorpdfstring{is\_rhyme\_in\_8()}{is\_rhyme\_in\_8()}}
+{\footnotesize\ttfamily bool is\+\_\+rhyme\+\_\+in\+\_\+8 (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s1,  }\item[{const char $\ast$}]{s2 }\end{DoxyParamCaption})}
+
+\DoxyHorRuler{0}
+ Takes two eight syllables strings and check checks if there is a rhyme. Considers that the lines are written in iambic
+
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{_bullshit_generator_8cpp_ac7da5d1b94efd08fa50647170273fd1d}\label{_bullshit_generator_8cpp_ac7da5d1b94efd08fa50647170273fd1d}} 
+\index{BullshitGenerator.cpp@{BullshitGenerator.cpp}!is\_rhyme\_in\_9@{is\_rhyme\_in\_9}}
+\index{is\_rhyme\_in\_9@{is\_rhyme\_in\_9}!BullshitGenerator.cpp@{BullshitGenerator.cpp}}
+\doxysubsubsection{\texorpdfstring{is\_rhyme\_in\_9()}{is\_rhyme\_in\_9()}}
+{\footnotesize\ttfamily bool is\+\_\+rhyme\+\_\+in\+\_\+9 (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s1,  }\item[{const char $\ast$}]{s2 }\end{DoxyParamCaption})}
+
+\DoxyHorRuler{0}
+ Takes two nine syllables strings and check checks if there is a rhyme. Considers that the lines are written in iambic
+
+\DoxyHorRuler{0}
+ 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_bullshit_generator_8cpp_a28ef689ebbac7ad22213fff51f81cc1d}\label{_bullshit_generator_8cpp_a28ef689ebbac7ad22213fff51f81cc1d}} 
+\index{BullshitGenerator.cpp@{BullshitGenerator.cpp}!rhyme\_step@{rhyme\_step}}
+\index{rhyme\_step@{rhyme\_step}!BullshitGenerator.cpp@{BullshitGenerator.cpp}}
+\doxysubsubsection{\texorpdfstring{rhyme\_step}{rhyme\_step}}
+{\footnotesize\ttfamily const int rhyme\+\_\+step = 12}
+

@@ -7,6 +7,17 @@
 
 const int rhyme_step = 12;
 
+/*!
+* \file
+* \brief 
+* This file contains functions for create Onegin stanza composed of various lines of the original work
+*/
+
+//!-----------------
+//! Takes two nine syllables strings and check checks if there is a rhyme.
+//! Considers that the lines are written in iambic
+//!
+//!-----------------
 bool is_rhyme_in_9(const char *s1, const char *s2)
 {
     const char* start_s1 = s1;
@@ -35,6 +46,11 @@ bool is_rhyme_in_9(const char *s1, const char *s2)
     return *s1 == *s2;
 }
 
+//!-----------------
+//! Takes two eight syllables strings and check checks if there is a rhyme.
+//! Considers that the lines are written in iambic
+//!
+//!-----------------
 bool is_rhyme_in_8(const char *s1, const char *s2)
 {
     const char* start_s1 = s1;
@@ -52,6 +68,16 @@ bool is_rhyme_in_8(const char *s1, const char *s2)
 
     return *s1 == *s2;
 }
+
+//!-----------------
+//! Gives two rhyming lines 
+//!@param [in]  lines        Array from lines will be selected
+//!@param [in]  number_lines Size of lines
+//!@param [in]  used         Array containing information about which lines from lines have already been used
+//!@param [out] s1           The first  line of for rhyme
+//!@param [out] s2           The second line of for rhyme
+//!@param [in]  phyme_comp   Function to check if two lines rhyme
+//!-----------------
 
 void get_rhyme(const char** lines, int number_lines, bool* used, const char **s1, const char **s2, 
                            bool (*rhyme_comp)(const char *s1, const char *s2))
@@ -82,7 +108,7 @@ void _bullshit_generator(const char** arrayLines, int numberLines, const char* f
     FILE * fp = fopen(fileName, "w");
     assert(fp != nullptr);
     
-    const int number_stanzas_to_generate = 10;
+    const int number_stanzas_to_generate = 100;
     srand(time(NULL));
 
     bool *used_8 = (bool *)calloc(numberLines, sizeof(bool));

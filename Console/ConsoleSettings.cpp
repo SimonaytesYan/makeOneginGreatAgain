@@ -4,13 +4,19 @@
 #include <windows.h>
 
 #include "ConsoleSettings.h"
-
+//!-----------------------------------------------------
+//! Function sets russian language in CMD 
+//! ----------------------------------------------------
 void init_console()
 {
     setlocale(LC_ALL, "Rus");
     //printf("\x1B[0m");
 }
 
+//!-----------------------------------------------------
+//! Function sets color in CMD (two other versions: for windows and for linux) 
+//! Color constant specified in ConosoleSettings.h
+//! ----------------------------------------------------
 #ifndef _WIN32
 void set_console_color(int color)
 {

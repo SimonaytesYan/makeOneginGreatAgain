@@ -5,6 +5,12 @@
 #include "Strings\_Strings.h"
 #include "Console\ConsoleSettings.h"
 
+/*!
+* \file
+* \brief 
+* This file contains my implementation of quick sortings algorithm and 
+* functions necessary for its operation and testing
+*/
 int comp(void * a, void* b)
 {
     int A = *((int*)a);

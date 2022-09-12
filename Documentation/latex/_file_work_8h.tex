@@ -1,0 +1,81 @@
+\hypertarget{_file_work_8h}{}\doxysection{File\+Work/\+File\+Work.h File Reference}
+\label{_file_work_8h}\index{FileWork/FileWork.h@{FileWork/FileWork.h}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_file_work_8h_a2d56bfb3d91cb3d7b8eef5560b6e7890}{\+\_\+gettext}} (char $\ast$text, int size, FILE $\ast$fp)
+\item 
+void \mbox{\hyperlink{_file_work_8h_aaaaad8e709c8db06679f8c8979514fdb}{\+\_\+getlines\+\_\+from\+\_\+text}} (const char $\ast$$\ast$lines, char $\ast$text)
+\item 
+void \mbox{\hyperlink{_file_work_8h_ab00c4ed49c566b484889c33945d96ce2}{\+\_\+put\+\_\+text\+\_\+to\+\_\+file}} (const char $\ast$text, FILE $\ast$fp, int N)
+\item 
+void \mbox{\hyperlink{_file_work_8h_a47f2d8aa60f91446a695ed5e6a10073a}{\+\_\+bullshit\+\_\+generator}} (const char $\ast$$\ast$array\+Lines, int number\+Lines, const char $\ast$file\+Name)
+\item 
+int \mbox{\hyperlink{_file_work_8h_ae83d7a5aaff3d89359a912e3f392a7b5}{\+\_\+get\+\_\+text\+\_\+size}} (const char $\ast$file\+\_\+name)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_file_work_8h_a47f2d8aa60f91446a695ed5e6a10073a}\label{_file_work_8h_a47f2d8aa60f91446a695ed5e6a10073a}} 
+\index{FileWork.h@{FileWork.h}!\_bullshit\_generator@{\_bullshit\_generator}}
+\index{\_bullshit\_generator@{\_bullshit\_generator}!FileWork.h@{FileWork.h}}
+\doxysubsubsection{\texorpdfstring{\_bullshit\_generator()}{\_bullshit\_generator()}}
+{\footnotesize\ttfamily void \+\_\+bullshit\+\_\+generator (\begin{DoxyParamCaption}\item[{const char $\ast$$\ast$}]{array\+Lines,  }\item[{int}]{number\+Lines,  }\item[{const char $\ast$}]{file\+Name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_file_work_8h_ae83d7a5aaff3d89359a912e3f392a7b5}\label{_file_work_8h_ae83d7a5aaff3d89359a912e3f392a7b5}} 
+\index{FileWork.h@{FileWork.h}!\_get\_text\_size@{\_get\_text\_size}}
+\index{\_get\_text\_size@{\_get\_text\_size}!FileWork.h@{FileWork.h}}
+\doxysubsubsection{\texorpdfstring{\_get\_text\_size()}{\_get\_text\_size()}}
+{\footnotesize\ttfamily int \+\_\+get\+\_\+text\+\_\+size (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+\DoxyHorRuler{0}
+ Function to measure file size in bytes 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em file\+\_\+name} & Name of file whose size you need to know \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+File size in bytes
+\end{DoxyReturn}
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{_file_work_8h_aaaaad8e709c8db06679f8c8979514fdb}\label{_file_work_8h_aaaaad8e709c8db06679f8c8979514fdb}} 
+\index{FileWork.h@{FileWork.h}!\_getlines\_from\_text@{\_getlines\_from\_text}}
+\index{\_getlines\_from\_text@{\_getlines\_from\_text}!FileWork.h@{FileWork.h}}
+\doxysubsubsection{\texorpdfstring{\_getlines\_from\_text()}{\_getlines\_from\_text()}}
+{\footnotesize\ttfamily void \+\_\+getlines\+\_\+from\+\_\+text (\begin{DoxyParamCaption}\item[{const char $\ast$$\ast$}]{lines,  }\item[{char $\ast$}]{text }\end{DoxyParamCaption})}
+
+\DoxyHorRuler{0}
+ \hypertarget{_file_work_8h_autotoc_md6}{}\doxysubsubsection{Function splits text from text to lines and write pointers to start lines in lines array}\label{_file_work_8h_autotoc_md6}
+\mbox{\Hypertarget{_file_work_8h_a2d56bfb3d91cb3d7b8eef5560b6e7890}\label{_file_work_8h_a2d56bfb3d91cb3d7b8eef5560b6e7890}} 
+\index{FileWork.h@{FileWork.h}!\_gettext@{\_gettext}}
+\index{\_gettext@{\_gettext}!FileWork.h@{FileWork.h}}
+\doxysubsubsection{\texorpdfstring{\_gettext()}{\_gettext()}}
+{\footnotesize\ttfamily int \+\_\+gettext (\begin{DoxyParamCaption}\item[{char $\ast$}]{text,  }\item[{int}]{size,  }\item[{FILE $\ast$}]{fp }\end{DoxyParamCaption})}
+
+\DoxyHorRuler{0}
+ Read text from file pointer fp to text \begin{DoxyReturn}{Returns}
+Number of lines in text
+\end{DoxyReturn}
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{_file_work_8h_ab00c4ed49c566b484889c33945d96ce2}\label{_file_work_8h_ab00c4ed49c566b484889c33945d96ce2}} 
+\index{FileWork.h@{FileWork.h}!\_put\_text\_to\_file@{\_put\_text\_to\_file}}
+\index{\_put\_text\_to\_file@{\_put\_text\_to\_file}!FileWork.h@{FileWork.h}}
+\doxysubsubsection{\texorpdfstring{\_put\_text\_to\_file()}{\_put\_text\_to\_file()}}
+{\footnotesize\ttfamily void \+\_\+put\+\_\+text\+\_\+to\+\_\+file (\begin{DoxyParamCaption}\item[{const char $\ast$}]{text,  }\item[{FILE $\ast$}]{fp,  }\item[{int}]{N }\end{DoxyParamCaption})}
+
+\DoxyHorRuler{0}
+ Puts text to file.
+
+Function puts N sympoles and replaces \textbackslash{}0 to ~\newline
+ and writes N symbols. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em text} & Text to put in file \\
+\hline
+\mbox{\texttt{ in}}  & {\em fp} & File pointer to file in which text will be printed \\
+\hline
+\mbox{\texttt{ in}}  & {\em N} & ~\newline
+\\
+\hline
+\end{DoxyParams}
+\DoxyHorRuler{0}
+ 

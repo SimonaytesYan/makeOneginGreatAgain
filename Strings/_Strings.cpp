@@ -4,7 +4,11 @@
 #include <stdio.h>
 
 #include "_Strings.h"
-
+/*!
+* \file
+* \brief 
+* This file contains implementation of standard string functions
+*/
 int _strlen(const char *str) 
 {
     int n = 0;
@@ -122,7 +126,9 @@ char *_strdup(const char *str)
 
     return duplicate;
 }
-
+//!------------------------
+//!Function works like stundard, but takes into account only letters and numbers 
+//!-------------------------
 int _strcmp(void *str1, void *str2)
 {
     const char * s1 = *(const char**)str1; 
@@ -158,6 +164,9 @@ int _strcmp(void *str1, void *str2)
     return s1[n1] - s2[n2];
 }
 
+//!------------------------
+//!Function works like _strcmp, but compares strings from the end
+//!-------------------------
 int _strcmp_reverse(void *str1, void *str2)
 {
     const char *s1 = *(const char**)str1;
@@ -257,6 +266,9 @@ int _getline(char *line, int max, FILE* fp)
     return n;
 }
 
+//!------------------------
+//!Function return true if c - russian letter and false otherwise
+//!-------------------------
 bool is_russian_letter_vowel(char c)
 {
     return (c == 'à' ||
@@ -281,6 +293,9 @@ bool is_russian_letter_vowel(char c)
             c == 'ß');
 }
 
+//!------------------------
+//!Function return true number of syllables in the str
+//!-------------------------
 int number_syllables(const char * str)
 {
     assert(str != nullptr);
@@ -288,7 +303,6 @@ int number_syllables(const char * str)
 
     while (*str != '\0')
     {
-        //printf("%c\n", *str);
         if (is_russian_letter_vowel(*str))
             number++;
         str++;

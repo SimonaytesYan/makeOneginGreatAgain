@@ -4,6 +4,13 @@
 #include "Tests.h"
 #include "_Strings.h"
 
+
+/*!
+* \file
+* \brief 
+* This file contains functions test functions from _Strings.cpp
+*/
+
 void test_strlen()
 {
     char f[] = "123456789";
@@ -431,45 +438,45 @@ void test_strcmp_reverse()
 
 void test_number_syllables()
 {
-    int ans = number_syllables("Ïğèâåò");
+    int ans = number_syllables("");
     printf("TEST 1: ");
     if (ans != 2)
     {
         printf("FAILED\n");
-        printf("string           = <%s>\n", "Ïğèâåò");
+        printf("string           = <%s>\n", "");
         printf("number_syllables = %d\n", ans);
     }
     else
         printf("PASSED\n");
 
-    ans = number_syllables("ÏĞÈÂÅÒ");
+    ans = number_syllables("");
     printf("TEST 2: ");
     if (ans != 2)
     {
         printf("FAILED\n");
-        printf("string           = <%s>\n", "ÏĞÈÂÅÒ");
+        printf("string           = <%s>\n", "");
         printf("number_syllables = %d\n", ans);
     }
     else
         printf("PASSED\n"); 
 
-    ans = number_syllables("à");
+    ans = number_syllables("");
     printf("TEST 3: ");
     if (ans != 1)
     {
         printf("FAILED\n");
-        printf("string           = <%s>\n", "à");
+        printf("string           = <%s>\n", "");
         printf("number_syllables = %d\n", ans);
     }
     else
         printf("PASSED\n");
 
-    ans = number_syllables("ÍÈÊÎËÀÉ, à ÂÎâà: ÏÓĞÓÏÓĞÓïóìïóì");
+    ans = number_syllables(",  : ");
     printf("TEST 4: ");
     if (ans != 12)
     {
         printf("FAILED\n");
-        printf("string           = <%s>\n", "Ï");
+        printf("string           = <%s>\n", "");
         printf("number_syllables = %d\n", ans);
     }
     else

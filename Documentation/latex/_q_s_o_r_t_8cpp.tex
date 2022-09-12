@@ -1,0 +1,63 @@
+\hypertarget{_q_s_o_r_t_8cpp}{}\doxysection{Qsort/\+QSORT.cpp File Reference}
+\label{_q_s_o_r_t_8cpp}\index{Qsort/QSORT.cpp@{Qsort/QSORT.cpp}}
+
+
+This file contains my implementation of quick sortings algorithm and functions necessary for its operation and testing.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}QSORT.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Strings\textbackslash{}\+\_\+\+Strings.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Console\textbackslash{}\+Console\+Settings.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_q_s_o_r_t_8cpp_a7fa38f60ed4338a89fc6b411c61c6621}{comp}} (void $\ast$a, void $\ast$b)
+\item 
+void \mbox{\hyperlink{_q_s_o_r_t_8cpp_a8653862586e8585bf18b8c2992f3ef68}{normal\+\_\+swap}} (void $\ast$a, void $\ast$b, size\+\_\+t Element\+Size)
+\item 
+void \mbox{\hyperlink{_q_s_o_r_t_8cpp_aef338551a4296fde19a87a14d0b98744}{QSORT}} (void $\ast$first, int number, int Element\+Size, int($\ast$comparator)(void $\ast$, void $\ast$))
+\item 
+void \mbox{\hyperlink{_q_s_o_r_t_8cpp_ab8f4aa7543e0868e3fc824f35f8e19b8}{test\+\_\+qsort}} ()
+\item 
+void \mbox{\hyperlink{_q_s_o_r_t_8cpp_aa9645d2d1912efd27e83867429e862d0}{test\+\_\+swap}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains my implementation of quick sortings algorithm and functions necessary for its operation and testing. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_q_s_o_r_t_8cpp_a7fa38f60ed4338a89fc6b411c61c6621}\label{_q_s_o_r_t_8cpp_a7fa38f60ed4338a89fc6b411c61c6621}} 
+\index{QSORT.cpp@{QSORT.cpp}!comp@{comp}}
+\index{comp@{comp}!QSORT.cpp@{QSORT.cpp}}
+\doxysubsubsection{\texorpdfstring{comp()}{comp()}}
+{\footnotesize\ttfamily int comp (\begin{DoxyParamCaption}\item[{void $\ast$}]{a,  }\item[{void $\ast$}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_q_s_o_r_t_8cpp_a8653862586e8585bf18b8c2992f3ef68}\label{_q_s_o_r_t_8cpp_a8653862586e8585bf18b8c2992f3ef68}} 
+\index{QSORT.cpp@{QSORT.cpp}!normal\_swap@{normal\_swap}}
+\index{normal\_swap@{normal\_swap}!QSORT.cpp@{QSORT.cpp}}
+\doxysubsubsection{\texorpdfstring{normal\_swap()}{normal\_swap()}}
+{\footnotesize\ttfamily void normal\+\_\+swap (\begin{DoxyParamCaption}\item[{void $\ast$}]{a,  }\item[{void $\ast$}]{b,  }\item[{size\+\_\+t}]{Element\+Size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_q_s_o_r_t_8cpp_aef338551a4296fde19a87a14d0b98744}\label{_q_s_o_r_t_8cpp_aef338551a4296fde19a87a14d0b98744}} 
+\index{QSORT.cpp@{QSORT.cpp}!QSORT@{QSORT}}
+\index{QSORT@{QSORT}!QSORT.cpp@{QSORT.cpp}}
+\doxysubsubsection{\texorpdfstring{QSORT()}{QSORT()}}
+{\footnotesize\ttfamily void QSORT (\begin{DoxyParamCaption}\item[{void $\ast$}]{first,  }\item[{int}]{number,  }\item[{int}]{Element\+Size,  }\item[{int($\ast$)(void $\ast$, void $\ast$)}]{comparator }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_q_s_o_r_t_8cpp_ab8f4aa7543e0868e3fc824f35f8e19b8}\label{_q_s_o_r_t_8cpp_ab8f4aa7543e0868e3fc824f35f8e19b8}} 
+\index{QSORT.cpp@{QSORT.cpp}!test\_qsort@{test\_qsort}}
+\index{test\_qsort@{test\_qsort}!QSORT.cpp@{QSORT.cpp}}
+\doxysubsubsection{\texorpdfstring{test\_qsort()}{test\_qsort()}}
+{\footnotesize\ttfamily void test\+\_\+qsort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_q_s_o_r_t_8cpp_aa9645d2d1912efd27e83867429e862d0}\label{_q_s_o_r_t_8cpp_aa9645d2d1912efd27e83867429e862d0}} 
+\index{QSORT.cpp@{QSORT.cpp}!test\_swap@{test\_swap}}
+\index{test\_swap@{test\_swap}!QSORT.cpp@{QSORT.cpp}}
+\doxysubsubsection{\texorpdfstring{test\_swap()}{test\_swap()}}
+{\footnotesize\ttfamily void test\+\_\+swap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
