@@ -1,4 +1,4 @@
-#Make Onegin greate again project
+# Make Onegin greate again project
  ___
  Executable file - Start.exe
  To recompile program print "make" in CMD 
