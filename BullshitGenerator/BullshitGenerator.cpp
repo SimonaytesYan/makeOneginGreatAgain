@@ -20,6 +20,9 @@ const int rhyme_step = 12;
 //!-----------------
 bool is_rhyme_in_9(const char *s1, const char *s2)
 {
+    assert(s1 != nullptr);
+    assert(s2 != nullptr);
+
     const char* start_s1 = s1;
     const char* start_s2 = s2;
 
@@ -53,6 +56,9 @@ bool is_rhyme_in_9(const char *s1, const char *s2)
 //!-----------------
 bool is_rhyme_in_8(const char *s1, const char *s2)
 {
+    assert(s1 != nullptr);
+    assert(s2 != nullptr);
+
     const char* start_s1 = s1;
     const char* start_s2 = s2;
 
@@ -71,17 +77,33 @@ bool is_rhyme_in_8(const char *s1, const char *s2)
 
 //!-----------------
 //! Gives two rhyming lines 
-//!@param [in]  lines        Array from lines will be selected
-//!@param [in]  number_lines Size of lines
-//!@param [in]  used         Array containing information about which lines from lines have already been used
-//!@param [out] s1           The first  line of for rhyme
-//!@param [out] s2           The second line of for rhyme
-//!@param [in]  phyme_comp   Function to check if two lines rhyme
+//!@param  [in]  lines        Array from lines will be selected
+//!@param  [in]  number_lines Size of lines
+//!@param  [in]  used         Array containing information about which lines from lines have already been used
+//!@param  [out] s1           The first  line of for rhyme
+//!@param  [out] s2           The second line of for rhyme
+//!@param  [in]  phyme_comp   Function to check if two lines rhyme
+//!@return 0 if executed correctly and -1 otherwise
+//!
 //!-----------------
 
-void get_rhyme(const char** lines, int number_lines, bool* used, const char **s1, const char **s2, 
+int get_rhyme(const char** lines, size_t number_lines, bool* used, const char **s1, const char **s2, 
                            bool (*rhyme_comp)(const char *s1, const char *s2))
 {
+    
+    if (lines      != nullptr)
+        return -1;
+    if (*lines     != nullptr)
+        return -1;
+    if (used       != nullptr)
+        return -1;
+    if (s1         != nullptr)
+        return -1;
+    if (s2         != nullptr)
+        return -1;
+    if (rhyme_comp != nullptr)
+        return -1;
+
     int index   = 0;
     int index_2 = 0;
     do
@@ -93,7 +115,7 @@ void get_rhyme(const char** lines, int number_lines, bool* used, const char **s1
         index_2 = index + (rand() % rhyme_step - rhyme_step/2);
         while (used[index_2] || index_2 < 0 || index_2 >= number_lines || index == index_2)
             index_2 = index + (rand() % rhyme_step - rhyme_step/2);
-    } 
+    }
     while(!rhyme_comp(lines[index], lines[index_2]));
 
     used[index]   = true;
@@ -103,8 +125,21 @@ void get_rhyme(const char** lines, int number_lines, bool* used, const char **s1
     *s2 = lines[index_2];
 }
 
-void _bullshit_generator(const char** arrayLines, int numberLines, const char* fileName)
+//!-----------------
+//!Generate number_stanzas_to_generate onegin stanza
+//!@param  [in] arrrayLines Array from lines to generate stazas will be selected
+//!@param  [in] numberLines Size of arrayLines
+//!@param  [in] fileName    File where generated stazas will be output  
+//!@return 0 if executed correctly and -1 otherwise
+//!
+//!-----------------
+
+int onegin_bullshit_generator(const char** arrayLines, size_t numberLines, const char* fileName)
 {
+    assert(arrayLines  != nullptr);
+    assert(*arrayLines != nullptr);
+    assert(fileName    != nullptr);
+
     FILE * fp = fopen(fileName, "w");
     assert(fp != nullptr);
     
@@ -119,11 +154,9 @@ void _bullshit_generator(const char** arrayLines, int numberLines, const char* f
 
     int number_8_syl_lines = 0;
     int number_9_syl_lines = 0;
-
     
     for(int i = 0; i < numberLines; i++)
     {
-        //printf("Start count syllables\n");
         const char *str = arrayLines[i];
         int n_syllables = number_syllables(str);
 
@@ -138,7 +171,6 @@ void _bullshit_generator(const char** arrayLines, int numberLines, const char* f
             number_9_syl_lines++;
         }      
     }
-    printf("Splited by number of syllables\n");
 
     for(int i = 0; i < number_stanzas_to_generate; i++)
     {
@@ -147,34 +179,38 @@ void _bullshit_generator(const char** arrayLines, int numberLines, const char* f
         const char *str3 = NULL;
         const char *str4 = NULL;
 
-        get_rhyme(lines_9_syllables, number_9_syl_lines, used_9, &str1, &str3, is_rhyme_in_9);
-        get_rhyme(lines_8_syllables, number_8_syl_lines, used_8, &str2, &str4, is_rhyme_in_8);
+        int get_phym_retrun = get_rhyme(lines_9_syllables, number_9_syl_lines, used_9, &str1, &str3, is_rhyme_in_9);
+        if (get_phym_retrun != 0)
+            return get_phym_retrun;
+        get_phym_retrun     = get_rhyme(lines_8_syllables, number_8_syl_lines, used_8, &str2, &str4, is_rhyme_in_8);
+        if (get_phym_retrun != 0)
+            return get_phym_retrun;
 
-        _puts(str1, fp);
-        _puts(str2, fp);
-        _puts(str3, fp);
-        _puts(str4, fp);
+        puts_(str1, fp);
+        puts_(str2, fp);
+        puts_(str3, fp);
+        puts_(str4, fp);
         
         get_rhyme(lines_9_syllables, number_9_syl_lines, used_9, &str1, &str2, is_rhyme_in_9);
-        _puts(str1, fp);
-        _puts(str2, fp);
+        puts_(str1, fp);
+        puts_(str2, fp);
         
         get_rhyme(lines_8_syllables, number_8_syl_lines, used_8, &str1, &str2, is_rhyme_in_8);
-        _puts(str1, fp);
-        _puts(str2, fp);
+        puts_(str1, fp);
+        puts_(str2, fp);
         
         get_rhyme(lines_9_syllables, number_9_syl_lines, used_9, &str1, &str4, is_rhyme_in_9);
         get_rhyme(lines_8_syllables, number_8_syl_lines, used_8, &str2, &str3, is_rhyme_in_8);
 
-        _puts(str1, fp);
-        _puts(str2, fp);
-        _puts(str3, fp);
-        _puts(str4, fp);
+        puts_(str1, fp);
+        puts_(str2, fp);
+        puts_(str3, fp);
+        puts_(str4, fp);
         
         get_rhyme(lines_8_syllables, number_8_syl_lines, used_8, &str1, &str2, is_rhyme_in_8);
-        _puts(str1, fp);
-        _puts(str2, fp);
-        _puts("", fp);
+        puts_(str1, fp);
+        puts_(str2, fp);
+        puts_("", fp);
 
     }
 

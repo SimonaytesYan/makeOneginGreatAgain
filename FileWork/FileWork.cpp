@@ -17,7 +17,7 @@
 //!\return Number of lines in text
 //!
 //!--------------------
-int _gettext(char *text, int size,  FILE *fp)
+int gettext(char *text, size_t size,  FILE *fp)
 {
     assert(text != NULL);
     assert(fp != NULL);
@@ -41,8 +41,11 @@ int _gettext(char *text, int size,  FILE *fp)
 //!--------------------------
 //!Function splits text from text to lines and write pointers to start lines in lines array
 //!--------------------------
-void _getlines_from_text(const char **lines, char *text)
+void getlines_from_text(const char **lines, char *text)
 {
+    assert(lines  != nullptr);
+    assert(text   != nullptr);
+
     int   n                = 0;
     int   line_num         = 0;
     bool  next_is_new_line = false;
@@ -56,10 +59,11 @@ void _getlines_from_text(const char **lines, char *text)
             next_is_new_line = false;
             lines[line_num] = &text[n];
         }
-        if (text[n] == '¨')
+        if (text[n] == '¨') // Back to Pushkin times without ¨. (c)Mentor
             text[n] = 'Å';
         if (text[n] == '¸')
             text[n] = 'å';
+
         if (text[n] == '\n')
         {
             text[n] = '\0';
@@ -79,11 +83,11 @@ void _getlines_from_text(const char **lines, char *text)
 //!\param [in] N   
 //!
 //!----------------
-void _put_text_to_file(const char *text, FILE *fp, int N)
-{
-    while (text[N - 1] == '\0')
-        N--;
-    
+void put_text_to_file(const char *text, FILE *fp, size_t N)
+{    
+    assert(text != nullptr);
+    assert(fp   != nullptr);
+
     for(int i = 0; i < N; i++)
     {
         char c = text[i];
@@ -99,8 +103,10 @@ void _put_text_to_file(const char *text, FILE *fp, int N)
 //! \return File size in bytes
 //!
 //! ----------------------------------------------------
-int _get_text_size(const char * file_name)
+int get_text_size(const char *file_name)
 {
+    assert(file_name != nullptr);
+
     struct stat buff = {};
     stat(file_name, &buff);
     return buff.st_size;

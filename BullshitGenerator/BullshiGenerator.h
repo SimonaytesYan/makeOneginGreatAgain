@@ -5,6 +5,6 @@ bool is_rhyme_in_9(const char *s1, const char *s2);
 
 bool is_phyme_in_8(const char *s1, const char *s2);
 
-void _bullshit_generator(const char** arrayLines, int numberLines, const char* fileName);
+int onegin_bullshit_generator(const char** arrayLines, size_t numberLines, const char* fileName);
 
 #endif

@@ -17,9 +17,9 @@ bool \mbox{\hyperlink{_bullshit_generator_8cpp_ac7da5d1b94efd08fa50647170273fd1d
 \item 
 bool \mbox{\hyperlink{_bullshit_generator_8cpp_a52ecb01018dfba0211886dcfecd9cc20}{is\+\_\+rhyme\+\_\+in\+\_\+8}} (const char $\ast$s1, const char $\ast$s2)
 \item 
-void \mbox{\hyperlink{_bullshit_generator_8cpp_a34ddf91c96158d51405851e43e01ca95}{get\+\_\+rhyme}} (const char $\ast$$\ast$lines, int number\+\_\+lines, bool $\ast$used, const char $\ast$$\ast$s1, const char $\ast$$\ast$s2, bool($\ast$rhyme\+\_\+comp)(const char $\ast$s1, const char $\ast$s2))
+int \mbox{\hyperlink{_bullshit_generator_8cpp_a7b9f7e04f7ef3bd30088413c8fd8be35}{get\+\_\+rhyme}} (const char $\ast$$\ast$lines, size\+\_\+t number\+\_\+lines, bool $\ast$used, const char $\ast$$\ast$s1, const char $\ast$$\ast$s2, bool($\ast$rhyme\+\_\+comp)(const char $\ast$s1, const char $\ast$s2))
 \item 
-void \mbox{\hyperlink{_bullshit_generator_8cpp_a47f2d8aa60f91446a695ed5e6a10073a}{\+\_\+bullshit\+\_\+generator}} (const char $\ast$$\ast$array\+Lines, int number\+Lines, const char $\ast$file\+Name)
+int \mbox{\hyperlink{_bullshit_generator_8cpp_af6dc41f124320e1dd82034b95c3c62f8}{onegin\+\_\+bullshit\+\_\+generator}} (const char $\ast$$\ast$array\+Lines, size\+\_\+t number\+Lines, const char $\ast$file\+Name)
 \end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
@@ -34,17 +34,11 @@ This file contains functions for create Onegin stanza composed of various lines 
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{_bullshit_generator_8cpp_a47f2d8aa60f91446a695ed5e6a10073a}\label{_bullshit_generator_8cpp_a47f2d8aa60f91446a695ed5e6a10073a}} 
-\index{BullshitGenerator.cpp@{BullshitGenerator.cpp}!\_bullshit\_generator@{\_bullshit\_generator}}
-\index{\_bullshit\_generator@{\_bullshit\_generator}!BullshitGenerator.cpp@{BullshitGenerator.cpp}}
-\doxysubsubsection{\texorpdfstring{\_bullshit\_generator()}{\_bullshit\_generator()}}
-{\footnotesize\ttfamily void \+\_\+bullshit\+\_\+generator (\begin{DoxyParamCaption}\item[{const char $\ast$$\ast$}]{array\+Lines,  }\item[{int}]{number\+Lines,  }\item[{const char $\ast$}]{file\+Name }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{_bullshit_generator_8cpp_a34ddf91c96158d51405851e43e01ca95}\label{_bullshit_generator_8cpp_a34ddf91c96158d51405851e43e01ca95}} 
+\mbox{\Hypertarget{_bullshit_generator_8cpp_a7b9f7e04f7ef3bd30088413c8fd8be35}\label{_bullshit_generator_8cpp_a7b9f7e04f7ef3bd30088413c8fd8be35}} 
 \index{BullshitGenerator.cpp@{BullshitGenerator.cpp}!get\_rhyme@{get\_rhyme}}
 \index{get\_rhyme@{get\_rhyme}!BullshitGenerator.cpp@{BullshitGenerator.cpp}}
 \doxysubsubsection{\texorpdfstring{get\_rhyme()}{get\_rhyme()}}
-{\footnotesize\ttfamily void get\+\_\+rhyme (\begin{DoxyParamCaption}\item[{const char $\ast$$\ast$}]{lines,  }\item[{int}]{number\+\_\+lines,  }\item[{bool $\ast$}]{used,  }\item[{const char $\ast$$\ast$}]{s1,  }\item[{const char $\ast$$\ast$}]{s2,  }\item[{bool($\ast$)(const char $\ast$s1, const char $\ast$s2)}]{rhyme\+\_\+comp }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int get\+\_\+rhyme (\begin{DoxyParamCaption}\item[{const char $\ast$$\ast$}]{lines,  }\item[{size\+\_\+t}]{number\+\_\+lines,  }\item[{bool $\ast$}]{used,  }\item[{const char $\ast$$\ast$}]{s1,  }\item[{const char $\ast$$\ast$}]{s2,  }\item[{bool($\ast$)(const char $\ast$s1, const char $\ast$s2)}]{rhyme\+\_\+comp }\end{DoxyParamCaption})}
 
 \DoxyHorRuler{0}
  Gives two rhyming lines 
@@ -59,9 +53,14 @@ This file contains functions for create Onegin stanza composed of various lines 
 \hline
 \mbox{\texttt{ out}}  & {\em s2} & The second line of for rhyme \\
 \hline
+\mbox{\texttt{ in}}  & {\em phyme\+\_\+comp} & Function to check if two lines rhyme \\
+\hline
 \end{DoxyParams}
-\hypertarget{_bullshit_generator_8cpp_autotoc_md2}{}\doxysubsubsection{@param \mbox{[}in\mbox{]}  phyme\+\_\+comp   Function to check if two lines rhyme}\label{_bullshit_generator_8cpp_autotoc_md2}
-\mbox{\Hypertarget{_bullshit_generator_8cpp_a52ecb01018dfba0211886dcfecd9cc20}\label{_bullshit_generator_8cpp_a52ecb01018dfba0211886dcfecd9cc20}} 
+\begin{DoxyReturn}{Returns}
+0 if executed correctly and -\/1 otherwise
+\end{DoxyReturn}
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{_bullshit_generator_8cpp_a52ecb01018dfba0211886dcfecd9cc20}\label{_bullshit_generator_8cpp_a52ecb01018dfba0211886dcfecd9cc20}} 
 \index{BullshitGenerator.cpp@{BullshitGenerator.cpp}!is\_rhyme\_in\_8@{is\_rhyme\_in\_8}}
 \index{is\_rhyme\_in\_8@{is\_rhyme\_in\_8}!BullshitGenerator.cpp@{BullshitGenerator.cpp}}
 \doxysubsubsection{\texorpdfstring{is\_rhyme\_in\_8()}{is\_rhyme\_in\_8()}}
@@ -81,7 +80,25 @@ This file contains functions for create Onegin stanza composed of various lines 
  Takes two nine syllables strings and check checks if there is a rhyme. Considers that the lines are written in iambic
 
 \DoxyHorRuler{0}
- 
+ \mbox{\Hypertarget{_bullshit_generator_8cpp_af6dc41f124320e1dd82034b95c3c62f8}\label{_bullshit_generator_8cpp_af6dc41f124320e1dd82034b95c3c62f8}} 
+\index{BullshitGenerator.cpp@{BullshitGenerator.cpp}!onegin\_bullshit\_generator@{onegin\_bullshit\_generator}}
+\index{onegin\_bullshit\_generator@{onegin\_bullshit\_generator}!BullshitGenerator.cpp@{BullshitGenerator.cpp}}
+\doxysubsubsection{\texorpdfstring{onegin\_bullshit\_generator()}{onegin\_bullshit\_generator()}}
+{\footnotesize\ttfamily int onegin\+\_\+bullshit\+\_\+generator (\begin{DoxyParamCaption}\item[{const char $\ast$$\ast$}]{array\+Lines,  }\item[{size\+\_\+t}]{number\+Lines,  }\item[{const char $\ast$}]{file\+Name }\end{DoxyParamCaption})}
+
+\DoxyHorRuler{0}
+ Generate number\+\_\+stanzas\+\_\+to\+\_\+generate onegin stanza 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em arrray\+Lines} & Array from lines to generate stazas will be selected \\
+\hline
+\mbox{\texttt{ in}}  & {\em number\+Lines} & Size of array\+Lines \\
+\hline
+\mbox{\texttt{ in}}  & {\em file\+Name} & File where generated stazas will be output ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\hypertarget{_bullshit_generator_8cpp_autotoc_md3}{}\doxysubsubsection{@return 0 if executed correctly and -\/1 otherwise}\label{_bullshit_generator_8cpp_autotoc_md3}
+
 
 \doxysubsection{Variable Documentation}
 \mbox{\Hypertarget{_bullshit_generator_8cpp_a28ef689ebbac7ad22213fff51f81cc1d}\label{_bullshit_generator_8cpp_a28ef689ebbac7ad22213fff51f81cc1d}} 

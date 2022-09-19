@@ -14,13 +14,13 @@ This file contains functions to file work.
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{_file_work_8cpp_a2d56bfb3d91cb3d7b8eef5560b6e7890}{\+\_\+gettext}} (char $\ast$text, int size, FILE $\ast$fp)
+int \mbox{\hyperlink{_file_work_8cpp_a8f406fd5c84c36e9442f7db11d273039}{gettext}} (char $\ast$text, size\+\_\+t size, FILE $\ast$fp)
 \item 
-void \mbox{\hyperlink{_file_work_8cpp_aaaaad8e709c8db06679f8c8979514fdb}{\+\_\+getlines\+\_\+from\+\_\+text}} (const char $\ast$$\ast$lines, char $\ast$text)
+void \mbox{\hyperlink{_file_work_8cpp_a151fd823304c3ffa5dc67dcdeebe779d}{getlines\+\_\+from\+\_\+text}} (const char $\ast$$\ast$lines, char $\ast$text)
 \item 
-void \mbox{\hyperlink{_file_work_8cpp_ab00c4ed49c566b484889c33945d96ce2}{\+\_\+put\+\_\+text\+\_\+to\+\_\+file}} (const char $\ast$text, FILE $\ast$fp, int N)
+void \mbox{\hyperlink{_file_work_8cpp_a6b3bf825108c89073ad39ac16f208fa6}{put\+\_\+text\+\_\+to\+\_\+file}} (const char $\ast$text, FILE $\ast$fp, size\+\_\+t N)
 \item 
-int \mbox{\hyperlink{_file_work_8cpp_ae83d7a5aaff3d89359a912e3f392a7b5}{\+\_\+get\+\_\+text\+\_\+size}} (const char $\ast$file\+\_\+name)
+int \mbox{\hyperlink{_file_work_8cpp_a6ad345e9fd528333ad93fb034a8fddb2}{get\+\_\+text\+\_\+size}} (const char $\ast$file\+\_\+name)
 \end{DoxyCompactItemize}
 
 
@@ -30,11 +30,11 @@ This file contains functions to file work.
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{_file_work_8cpp_ae83d7a5aaff3d89359a912e3f392a7b5}\label{_file_work_8cpp_ae83d7a5aaff3d89359a912e3f392a7b5}} 
-\index{FileWork.cpp@{FileWork.cpp}!\_get\_text\_size@{\_get\_text\_size}}
-\index{\_get\_text\_size@{\_get\_text\_size}!FileWork.cpp@{FileWork.cpp}}
-\doxysubsubsection{\texorpdfstring{\_get\_text\_size()}{\_get\_text\_size()}}
-{\footnotesize\ttfamily int \+\_\+get\+\_\+text\+\_\+size (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+\_\+name }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{_file_work_8cpp_a6ad345e9fd528333ad93fb034a8fddb2}\label{_file_work_8cpp_a6ad345e9fd528333ad93fb034a8fddb2}} 
+\index{FileWork.cpp@{FileWork.cpp}!get\_text\_size@{get\_text\_size}}
+\index{get\_text\_size@{get\_text\_size}!FileWork.cpp@{FileWork.cpp}}
+\doxysubsubsection{\texorpdfstring{get\_text\_size()}{get\_text\_size()}}
+{\footnotesize\ttfamily int get\+\_\+text\+\_\+size (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+\_\+name }\end{DoxyParamCaption})}
 
 \DoxyHorRuler{0}
  Function to measure file size in bytes 
@@ -46,30 +46,30 @@ This file contains functions to file work.
 File size in bytes
 \end{DoxyReturn}
 \DoxyHorRuler{0}
- \mbox{\Hypertarget{_file_work_8cpp_aaaaad8e709c8db06679f8c8979514fdb}\label{_file_work_8cpp_aaaaad8e709c8db06679f8c8979514fdb}} 
-\index{FileWork.cpp@{FileWork.cpp}!\_getlines\_from\_text@{\_getlines\_from\_text}}
-\index{\_getlines\_from\_text@{\_getlines\_from\_text}!FileWork.cpp@{FileWork.cpp}}
-\doxysubsubsection{\texorpdfstring{\_getlines\_from\_text()}{\_getlines\_from\_text()}}
-{\footnotesize\ttfamily void \+\_\+getlines\+\_\+from\+\_\+text (\begin{DoxyParamCaption}\item[{const char $\ast$$\ast$}]{lines,  }\item[{char $\ast$}]{text }\end{DoxyParamCaption})}
+ \mbox{\Hypertarget{_file_work_8cpp_a151fd823304c3ffa5dc67dcdeebe779d}\label{_file_work_8cpp_a151fd823304c3ffa5dc67dcdeebe779d}} 
+\index{FileWork.cpp@{FileWork.cpp}!getlines\_from\_text@{getlines\_from\_text}}
+\index{getlines\_from\_text@{getlines\_from\_text}!FileWork.cpp@{FileWork.cpp}}
+\doxysubsubsection{\texorpdfstring{getlines\_from\_text()}{getlines\_from\_text()}}
+{\footnotesize\ttfamily void getlines\+\_\+from\+\_\+text (\begin{DoxyParamCaption}\item[{const char $\ast$$\ast$}]{lines,  }\item[{char $\ast$}]{text }\end{DoxyParamCaption})}
 
 \DoxyHorRuler{0}
- \hypertarget{_file_work_8h_autotoc_md6}{}\doxysubsubsection{Function splits text from text to lines and write pointers to start lines in lines array}\label{_file_work_8h_autotoc_md6}
-\mbox{\Hypertarget{_file_work_8cpp_a2d56bfb3d91cb3d7b8eef5560b6e7890}\label{_file_work_8cpp_a2d56bfb3d91cb3d7b8eef5560b6e7890}} 
-\index{FileWork.cpp@{FileWork.cpp}!\_gettext@{\_gettext}}
-\index{\_gettext@{\_gettext}!FileWork.cpp@{FileWork.cpp}}
-\doxysubsubsection{\texorpdfstring{\_gettext()}{\_gettext()}}
-{\footnotesize\ttfamily int \+\_\+gettext (\begin{DoxyParamCaption}\item[{char $\ast$}]{text,  }\item[{int}]{size,  }\item[{FILE $\ast$}]{fp }\end{DoxyParamCaption})}
+ \hypertarget{_file_work_8h_autotoc_md7}{}\doxysubsubsection{Function splits text from text to lines and write pointers to start lines in lines array}\label{_file_work_8h_autotoc_md7}
+\mbox{\Hypertarget{_file_work_8cpp_a8f406fd5c84c36e9442f7db11d273039}\label{_file_work_8cpp_a8f406fd5c84c36e9442f7db11d273039}} 
+\index{FileWork.cpp@{FileWork.cpp}!gettext@{gettext}}
+\index{gettext@{gettext}!FileWork.cpp@{FileWork.cpp}}
+\doxysubsubsection{\texorpdfstring{gettext()}{gettext()}}
+{\footnotesize\ttfamily int gettext (\begin{DoxyParamCaption}\item[{char $\ast$}]{text,  }\item[{size\+\_\+t}]{size,  }\item[{FILE $\ast$}]{fp }\end{DoxyParamCaption})}
 
 \DoxyHorRuler{0}
  Read text from file pointer fp to text \begin{DoxyReturn}{Returns}
 Number of lines in text
 \end{DoxyReturn}
 \DoxyHorRuler{0}
- \mbox{\Hypertarget{_file_work_8cpp_ab00c4ed49c566b484889c33945d96ce2}\label{_file_work_8cpp_ab00c4ed49c566b484889c33945d96ce2}} 
-\index{FileWork.cpp@{FileWork.cpp}!\_put\_text\_to\_file@{\_put\_text\_to\_file}}
-\index{\_put\_text\_to\_file@{\_put\_text\_to\_file}!FileWork.cpp@{FileWork.cpp}}
-\doxysubsubsection{\texorpdfstring{\_put\_text\_to\_file()}{\_put\_text\_to\_file()}}
-{\footnotesize\ttfamily void \+\_\+put\+\_\+text\+\_\+to\+\_\+file (\begin{DoxyParamCaption}\item[{const char $\ast$}]{text,  }\item[{FILE $\ast$}]{fp,  }\item[{int}]{N }\end{DoxyParamCaption})}
+ \mbox{\Hypertarget{_file_work_8cpp_a6b3bf825108c89073ad39ac16f208fa6}\label{_file_work_8cpp_a6b3bf825108c89073ad39ac16f208fa6}} 
+\index{FileWork.cpp@{FileWork.cpp}!put\_text\_to\_file@{put\_text\_to\_file}}
+\index{put\_text\_to\_file@{put\_text\_to\_file}!FileWork.cpp@{FileWork.cpp}}
+\doxysubsubsection{\texorpdfstring{put\_text\_to\_file()}{put\_text\_to\_file()}}
+{\footnotesize\ttfamily void put\+\_\+text\+\_\+to\+\_\+file (\begin{DoxyParamCaption}\item[{const char $\ast$}]{text,  }\item[{FILE $\ast$}]{fp,  }\item[{size\+\_\+t}]{N }\end{DoxyParamCaption})}
 
 \DoxyHorRuler{0}
  Puts text to file.

@@ -87,10 +87,10 @@ Functions</h2></td></tr>
 <tr class="separator:ac7da5d1b94efd08fa50647170273fd1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52ecb01018dfba0211886dcfecd9cc20"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bullshit_generator_8cpp.html#a52ecb01018dfba0211886dcfecd9cc20">is_rhyme_in_8</a> (const char *s1, const char *s2)</td></tr>
 <tr class="separator:a52ecb01018dfba0211886dcfecd9cc20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34ddf91c96158d51405851e43e01ca95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bullshit_generator_8cpp.html#a34ddf91c96158d51405851e43e01ca95">get_rhyme</a> (const char **lines, int number_lines, bool *used, const char **s1, const char **s2, bool(*rhyme_comp)(const char *s1, const char *s2))</td></tr>
-<tr class="separator:a34ddf91c96158d51405851e43e01ca95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47f2d8aa60f91446a695ed5e6a10073a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bullshit_generator_8cpp.html#a47f2d8aa60f91446a695ed5e6a10073a">_bullshit_generator</a> (const char **arrayLines, int numberLines, const char *fileName)</td></tr>
-<tr class="separator:a47f2d8aa60f91446a695ed5e6a10073a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b9f7e04f7ef3bd30088413c8fd8be35"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bullshit_generator_8cpp.html#a7b9f7e04f7ef3bd30088413c8fd8be35">get_rhyme</a> (const char **lines, size_t number_lines, bool *used, const char **s1, const char **s2, bool(*rhyme_comp)(const char *s1, const char *s2))</td></tr>
+<tr class="separator:a7b9f7e04f7ef3bd30088413c8fd8be35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6dc41f124320e1dd82034b95c3c62f8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bullshit_generator_8cpp.html#af6dc41f124320e1dd82034b95c3c62f8">onegin_bullshit_generator</a> (const char **arrayLines, size_t numberLines, const char *fileName)</td></tr>
+<tr class="separator:af6dc41f124320e1dd82034b95c3c62f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -100,48 +100,14 @@ Variables</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file contains functions for create Onegin stanza composed of various lines of the original work. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a47f2d8aa60f91446a695ed5e6a10073a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47f2d8aa60f91446a695ed5e6a10073a">&#9670;&nbsp;</a></span>_bullshit_generator()</h2>
+<a id="a7b9f7e04f7ef3bd30088413c8fd8be35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b9f7e04f7ef3bd30088413c8fd8be35">&#9670;&nbsp;</a></span>get_rhyme()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void _bullshit_generator </td>
-          <td>(</td>
-          <td class="paramtype">const char **&#160;</td>
-          <td class="paramname"><em>arrayLines</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>numberLines</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>fileName</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a34ddf91c96158d51405851e43e01ca95"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a34ddf91c96158d51405851e43e01ca95">&#9670;&nbsp;</a></span>get_rhyme()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void get_rhyme </td>
+          <td class="memname">int get_rhyme </td>
           <td>(</td>
           <td class="paramtype">const char **&#160;</td>
           <td class="paramname"><em>lines</em>, </td>
@@ -149,7 +115,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>number_lines</em>, </td>
         </tr>
         <tr>
@@ -191,12 +157,13 @@ Variables</h2></td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">used</td><td>Array containing information about which lines from lines have already been used </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">s1</td><td>The first line of for rhyme </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">s2</td><td>The second line of for rhyme </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">phyme_comp</td><td>Function to check if two lines rhyme </td></tr>
   </table>
   </dd>
 </dl>
-<h2><a class="anchor" id="autotoc_md2"></a>
-@param [in]  phyme_comp   Function to check if two lines rhyme</h2>
-
+<dl class="section return"><dt>Returns</dt><dd>0 if executed correctly and -1 otherwise</dd></dl>
+<hr  />
+ 
 </div>
 </div>
 <a id="a52ecb01018dfba0211886dcfecd9cc20"></a>
@@ -259,6 +226,52 @@ Variables</h2></td></tr>
 <p> Takes two nine syllables strings and check checks if there is a rhyme. Considers that the lines are written in iambic</p>
 <hr  />
  
+</div>
+</div>
+<a id="af6dc41f124320e1dd82034b95c3c62f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6dc41f124320e1dd82034b95c3c62f8">&#9670;&nbsp;</a></span>onegin_bullshit_generator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int onegin_bullshit_generator </td>
+          <td>(</td>
+          <td class="paramtype">const char **&#160;</td>
+          <td class="paramname"><em>arrayLines</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>numberLines</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>fileName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<hr  />
+<p> Generate number_stanzas_to_generate onegin stanza </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">arrrayLines</td><td>Array from lines to generate stazas will be selected </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">numberLines</td><td>Size of arrayLines </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fileName</td><td>File where generated stazas will be output <br  />
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+<h2><a class="anchor" id="autotoc_md3"></a>
+@return 0 if executed correctly and -1 otherwise</h2>
+
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>

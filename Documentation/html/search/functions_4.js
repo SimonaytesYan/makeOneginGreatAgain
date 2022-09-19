@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['main_119',['main',['../_clean_file_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;CleanFile.cpp'],['../_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;Main.cpp'],['../_main_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;MainTest.cpp']]]
+  ['normal_5fswap_104',['normal_swap',['../_q_s_o_r_t_8cpp.html#a8653862586e8585bf18b8c2992f3ef68',1,'normal_swap(void *a, void *b, size_t ElementSize):&#160;QSORT.cpp'],['../_q_s_o_r_t_8h.html#a8653862586e8585bf18b8c2992f3ef68',1,'normal_swap(void *a, void *b, size_t ElementSize):&#160;QSORT.cpp']]],
+  ['number_5fsyllables_105',['number_syllables',['../___strings_8cpp.html#a2fe0369d96daad25121da36bcc1b7704',1,'number_syllables(const char *str):&#160;_Strings.cpp'],['../___strings_8h.html#a2fe0369d96daad25121da36bcc1b7704',1,'number_syllables(const char *str):&#160;_Strings.cpp']]]
 ];

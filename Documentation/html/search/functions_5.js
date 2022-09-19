@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['normal_5fswap_120',['normal_swap',['../_q_s_o_r_t_8cpp.html#a8653862586e8585bf18b8c2992f3ef68',1,'normal_swap(void *a, void *b, size_t ElementSize):&#160;QSORT.cpp'],['../_q_s_o_r_t_8h.html#a8653862586e8585bf18b8c2992f3ef68',1,'normal_swap(void *a, void *b, size_t ElementSize):&#160;QSORT.cpp']]],
-  ['number_5fsyllables_121',['number_syllables',['../___strings_8cpp.html#a2fe0369d96daad25121da36bcc1b7704',1,'number_syllables(const char *str):&#160;_Strings.cpp'],['../___strings_8h.html#a2fe0369d96daad25121da36bcc1b7704',1,'number_syllables(const char *str):&#160;_Strings.cpp']]]
+  ['onegin_5fbullshit_5fgenerator_106',['onegin_bullshit_generator',['../_bullshi_generator_8h.html#aa1512c0569c9460c804afb53bc4eb97a',1,'onegin_bullshit_generator(const char **arrayLines, size_t numberLines, const char *fileName):&#160;BullshitGenerator.cpp'],['../_bullshit_generator_8cpp.html#af6dc41f124320e1dd82034b95c3c62f8',1,'onegin_bullshit_generator(const char **arrayLines, size_t numberLines, const char *fileName):&#160;BullshitGenerator.cpp']]]
 ];

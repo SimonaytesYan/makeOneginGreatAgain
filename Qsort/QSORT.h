@@ -3,6 +3,6 @@
 
 void normal_swap(void *a, void *b, size_t ElementSize);
 
-void QSORT(void * first, int number, int ElementSize, int (*comparator)(void *, void *));
+void QSORT(void * first, size_t number, size_t ElementSize, int (*comparator)(void *, void *));
 
 #endif

@@ -1,9 +1,9 @@
 #include <stdlib.h>
+#include <assert.h>
 #include <stdio.h>
 
 #include "QSORT.h"
-#include "Strings\_Strings.h"
-#include "Console\ConsoleSettings.h"
+#include "..\Console\ConsoleSettings.h"
 
 /*!
 * \file
@@ -13,6 +13,9 @@
 */
 int comp(void * a, void* b)
 {
+    assert(a != nullptr);
+    assert(b != nullptr);
+
     int A = *((int*)a);
     int B = *((int*)b);
 
@@ -21,22 +24,31 @@ int comp(void * a, void* b)
 
 void normal_swap(void *a, void *b, size_t ElementSize)
 {
-    char* c = (char*)malloc(ElementSize);
+    assert(a != nullptr);
+    assert(b != nullptr);
 
-    for(int i = 0; i < ElementSize; i++)
-        c[i] =  ((char*)a)[i];
+    int i = 0;
+    for(i = 0; i < ElementSize/8; i++)
+    {
+        long long c = ((long long*)a)[i];
 
-    for(int i = 0; i < ElementSize; i++)
+        ((long long*)a)[i] = ((char*)b)[i];
+        ((long long*)b)[i] = c;
+    }
+    for(i; i < ElementSize; i++)
+    {
+        char c = ((char*)a)[i];
+
         ((char*)a)[i] = ((char*)b)[i];
-    
-    for(int i = 0; i < ElementSize; i++)
-        ((char*)b)[i] = ((char*)c)[i];
-
-    free(c);
+        ((char*)b)[i] = c;
+    }
 }
 
-void QSORT(void * first, int number, int ElementSize, int (*comparator)(void *, void *))
+void QSORT(void * first, size_t number, size_t ElementSize, int (*comparator)(void *, void *))
 {
+    assert(first      != nullptr);
+    assert(comparator != nullptr);
+
     if (number <= 1)
         return;
     

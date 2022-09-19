@@ -76,60 +76,24 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a2d56bfb3d91cb3d7b8eef5560b6e7890"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_file_work_8h.html#a2d56bfb3d91cb3d7b8eef5560b6e7890">_gettext</a> (char *text, int size, FILE *fp)</td></tr>
-<tr class="separator:a2d56bfb3d91cb3d7b8eef5560b6e7890"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaaaad8e709c8db06679f8c8979514fdb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_file_work_8h.html#aaaaad8e709c8db06679f8c8979514fdb">_getlines_from_text</a> (const char **lines, char *text)</td></tr>
-<tr class="separator:aaaaad8e709c8db06679f8c8979514fdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab00c4ed49c566b484889c33945d96ce2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_file_work_8h.html#ab00c4ed49c566b484889c33945d96ce2">_put_text_to_file</a> (const char *text, FILE *fp, int N)</td></tr>
-<tr class="separator:ab00c4ed49c566b484889c33945d96ce2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47f2d8aa60f91446a695ed5e6a10073a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_file_work_8h.html#a47f2d8aa60f91446a695ed5e6a10073a">_bullshit_generator</a> (const char **arrayLines, int numberLines, const char *fileName)</td></tr>
-<tr class="separator:a47f2d8aa60f91446a695ed5e6a10073a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae83d7a5aaff3d89359a912e3f392a7b5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_file_work_8h.html#ae83d7a5aaff3d89359a912e3f392a7b5">_get_text_size</a> (const char *file_name)</td></tr>
-<tr class="separator:ae83d7a5aaff3d89359a912e3f392a7b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f406fd5c84c36e9442f7db11d273039"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_file_work_8h.html#a8f406fd5c84c36e9442f7db11d273039">gettext</a> (char *text, size_t size, FILE *fp)</td></tr>
+<tr class="separator:a8f406fd5c84c36e9442f7db11d273039"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a151fd823304c3ffa5dc67dcdeebe779d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_file_work_8h.html#a151fd823304c3ffa5dc67dcdeebe779d">getlines_from_text</a> (const char **lines, char *text)</td></tr>
+<tr class="separator:a151fd823304c3ffa5dc67dcdeebe779d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b3bf825108c89073ad39ac16f208fa6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_file_work_8h.html#a6b3bf825108c89073ad39ac16f208fa6">put_text_to_file</a> (const char *text, FILE *fp, size_t N)</td></tr>
+<tr class="separator:a6b3bf825108c89073ad39ac16f208fa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ad345e9fd528333ad93fb034a8fddb2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_file_work_8h.html#a6ad345e9fd528333ad93fb034a8fddb2">get_text_size</a> (const char *file_name)</td></tr>
+<tr class="separator:a6ad345e9fd528333ad93fb034a8fddb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a47f2d8aa60f91446a695ed5e6a10073a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47f2d8aa60f91446a695ed5e6a10073a">&#9670;&nbsp;</a></span>_bullshit_generator()</h2>
+<a id="a6ad345e9fd528333ad93fb034a8fddb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ad345e9fd528333ad93fb034a8fddb2">&#9670;&nbsp;</a></span>get_text_size()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void _bullshit_generator </td>
-          <td>(</td>
-          <td class="paramtype">const char **&#160;</td>
-          <td class="paramname"><em>arrayLines</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>numberLines</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>fileName</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae83d7a5aaff3d89359a912e3f392a7b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae83d7a5aaff3d89359a912e3f392a7b5">&#9670;&nbsp;</a></span>_get_text_size()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int _get_text_size </td>
+          <td class="memname">int get_text_size </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>file_name</em></td><td>)</td>
@@ -149,14 +113,14 @@ Functions</h2></td></tr>
  
 </div>
 </div>
-<a id="aaaaad8e709c8db06679f8c8979514fdb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaaaad8e709c8db06679f8c8979514fdb">&#9670;&nbsp;</a></span>_getlines_from_text()</h2>
+<a id="a151fd823304c3ffa5dc67dcdeebe779d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a151fd823304c3ffa5dc67dcdeebe779d">&#9670;&nbsp;</a></span>getlines_from_text()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void _getlines_from_text </td>
+          <td class="memname">void getlines_from_text </td>
           <td>(</td>
           <td class="paramtype">const char **&#160;</td>
           <td class="paramname"><em>lines</em>, </td>
@@ -175,19 +139,19 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <hr  />
- <h2><a class="anchor" id="autotoc_md6"></a>
+ <h2><a class="anchor" id="autotoc_md7"></a>
 Function splits text from text to lines and write pointers to start lines in lines array</h2>
 
 </div>
 </div>
-<a id="a2d56bfb3d91cb3d7b8eef5560b6e7890"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d56bfb3d91cb3d7b8eef5560b6e7890">&#9670;&nbsp;</a></span>_gettext()</h2>
+<a id="a8f406fd5c84c36e9442f7db11d273039"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f406fd5c84c36e9442f7db11d273039">&#9670;&nbsp;</a></span>gettext()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int _gettext </td>
+          <td class="memname">int gettext </td>
           <td>(</td>
           <td class="paramtype">char *&#160;</td>
           <td class="paramname"><em>text</em>, </td>
@@ -195,7 +159,7 @@ Function splits text from text to lines and write pointers to start lines in lin
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>size</em>, </td>
         </tr>
         <tr>
@@ -217,14 +181,14 @@ Function splits text from text to lines and write pointers to start lines in lin
  
 </div>
 </div>
-<a id="ab00c4ed49c566b484889c33945d96ce2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab00c4ed49c566b484889c33945d96ce2">&#9670;&nbsp;</a></span>_put_text_to_file()</h2>
+<a id="a6b3bf825108c89073ad39ac16f208fa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b3bf825108c89073ad39ac16f208fa6">&#9670;&nbsp;</a></span>put_text_to_file()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void _put_text_to_file </td>
+          <td class="memname">void put_text_to_file </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>text</em>, </td>
@@ -238,7 +202,7 @@ Function splits text from text to lines and write pointers to start lines in lin
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>N</em>&#160;</td>
         </tr>
         <tr>

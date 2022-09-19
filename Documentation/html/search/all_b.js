@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['read_5ffrom_49',['READ_FROM',['../_clean_file_8cpp.html#ae3c6c0017a6800d6f30727d232a02d13',1,'READ_FROM():&#160;CleanFile.cpp'],['../_main_8cpp.html#ae3c6c0017a6800d6f30727d232a02d13',1,'READ_FROM():&#160;Main.cpp']]],
-  ['readme_50',['README',['../md__r_e_a_d_m_e.html',1,'']]],
-  ['readme_2emd_51',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
-  ['red_52',['RED',['../_console_settings_8h.html#ad67d94ad3fda549e3b18e4406f2d85fcaf80f9a890089d211842d59625e561f88',1,'ConsoleSettings.h']]],
-  ['rhyme_5fstep_53',['rhyme_step',['../_bullshit_generator_8cpp.html#a28ef689ebbac7ad22213fff51f81cc1d',1,'BullshitGenerator.cpp']]]
+  ['put_5ftext_5fto_5ffile_32',['put_text_to_file',['../_file_work_8cpp.html#a6b3bf825108c89073ad39ac16f208fa6',1,'put_text_to_file(const char *text, FILE *fp, size_t N):&#160;FileWork.cpp'],['../_file_work_8h.html#a6b3bf825108c89073ad39ac16f208fa6',1,'put_text_to_file(const char *text, FILE *fp, size_t N):&#160;FileWork.cpp']]],
+  ['puts_5f_33',['puts_',['../___strings_8cpp.html#ae765aaf503f2655c82d2a83b03144b01',1,'puts_(const char *str, FILE *fp):&#160;_Strings.cpp'],['../___strings_8h.html#ae765aaf503f2655c82d2a83b03144b01',1,'puts_(const char *str, FILE *fp):&#160;_Strings.cpp']]]
 ];

@@ -80,44 +80,10 @@ Functions</h2></td></tr>
 <tr class="separator:ac7da5d1b94efd08fa50647170273fd1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5688c2cdac268aff1fb541baacf2db2b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bullshi_generator_8h.html#a5688c2cdac268aff1fb541baacf2db2b">is_phyme_in_8</a> (const char *s1, const char *s2)</td></tr>
 <tr class="separator:a5688c2cdac268aff1fb541baacf2db2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47f2d8aa60f91446a695ed5e6a10073a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bullshi_generator_8h.html#a47f2d8aa60f91446a695ed5e6a10073a">_bullshit_generator</a> (const char **arrayLines, int numberLines, const char *fileName)</td></tr>
-<tr class="separator:a47f2d8aa60f91446a695ed5e6a10073a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1512c0569c9460c804afb53bc4eb97a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_bullshi_generator_8h.html#aa1512c0569c9460c804afb53bc4eb97a">onegin_bullshit_generator</a> (const char **arrayLines, size_t numberLines, const char *fileName)</td></tr>
+<tr class="separator:aa1512c0569c9460c804afb53bc4eb97a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a47f2d8aa60f91446a695ed5e6a10073a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47f2d8aa60f91446a695ed5e6a10073a">&#9670;&nbsp;</a></span>_bullshit_generator()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void _bullshit_generator </td>
-          <td>(</td>
-          <td class="paramtype">const char **&#160;</td>
-          <td class="paramname"><em>arrayLines</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>numberLines</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>fileName</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a5688c2cdac268aff1fb541baacf2db2b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5688c2cdac268aff1fb541baacf2db2b">&#9670;&nbsp;</a></span>is_phyme_in_8()</h2>
 
@@ -175,6 +141,52 @@ Functions</h2></td></tr>
 <p> Takes two nine syllables strings and check checks if there is a rhyme. Considers that the lines are written in iambic</p>
 <hr  />
  
+</div>
+</div>
+<a id="aa1512c0569c9460c804afb53bc4eb97a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1512c0569c9460c804afb53bc4eb97a">&#9670;&nbsp;</a></span>onegin_bullshit_generator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void onegin_bullshit_generator </td>
+          <td>(</td>
+          <td class="paramtype">const char **&#160;</td>
+          <td class="paramname"><em>arrayLines</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>numberLines</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>fileName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<hr  />
+<p> Generate number_stanzas_to_generate onegin stanza </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">arrrayLines</td><td>Array from lines to generate stazas will be selected </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">numberLines</td><td>Size of arrayLines </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fileName</td><td>File where generated stazas will be output <br  />
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+<h2><a class="anchor" id="autotoc_md3"></a>
+@return 0 if executed correctly and -1 otherwise</h2>
+
 </div>
 </div>
 </div><!-- contents -->

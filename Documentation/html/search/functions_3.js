@@ -1,8 +1,4 @@
 var searchData=
 [
-  ['init_5fconsole_114',['init_console',['../_console_settings_8cpp.html#ab9c32270380ee4550fa848647b745f39',1,'init_console():&#160;ConsoleSettings.cpp'],['../_console_settings_8h.html#ab9c32270380ee4550fa848647b745f39',1,'init_console():&#160;ConsoleSettings.cpp']]],
-  ['is_5fphyme_5fin_5f8_115',['is_phyme_in_8',['../_bullshi_generator_8h.html#a5688c2cdac268aff1fb541baacf2db2b',1,'BullshiGenerator.h']]],
-  ['is_5frhyme_5fin_5f8_116',['is_rhyme_in_8',['../_bullshit_generator_8cpp.html#a52ecb01018dfba0211886dcfecd9cc20',1,'BullshitGenerator.cpp']]],
-  ['is_5frhyme_5fin_5f9_117',['is_rhyme_in_9',['../_bullshi_generator_8h.html#ac7da5d1b94efd08fa50647170273fd1d',1,'is_rhyme_in_9(const char *s1, const char *s2):&#160;BullshitGenerator.cpp'],['../_bullshit_generator_8cpp.html#ac7da5d1b94efd08fa50647170273fd1d',1,'is_rhyme_in_9(const char *s1, const char *s2):&#160;BullshitGenerator.cpp']]],
-  ['is_5frussian_5fletter_5fvowel_118',['is_russian_letter_vowel',['../___strings_8cpp.html#a16854203c8880feafe5dd4b00b278b62',1,'is_russian_letter_vowel(char c):&#160;_Strings.cpp'],['../___strings_8h.html#a16854203c8880feafe5dd4b00b278b62',1,'is_russian_letter_vowel(char c):&#160;_Strings.cpp']]]
+  ['main_103',['main',['../_clean_file_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;CleanFile.cpp'],['../_main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c',1,'main(int argc, const char *argv[]):&#160;Main.cpp'],['../_main_test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;MainTest.cpp']]]
 ];

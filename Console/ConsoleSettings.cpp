@@ -4,8 +4,16 @@
 #include <windows.h>
 
 #include "ConsoleSettings.h"
+
+/*!
+* \file
+* \brief 
+* This file contains functions to settings CMD
+*/
+
 //!-----------------------------------------------------
 //! Function sets russian language in CMD 
+//!
 //! ----------------------------------------------------
 void init_console()
 {
@@ -16,6 +24,7 @@ void init_console()
 //!-----------------------------------------------------
 //! Function sets color in CMD (two other versions: for windows and for linux) 
 //! Color constant specified in ConosoleSettings.h
+//! 
 //! ----------------------------------------------------
 #ifndef _WIN32
 void set_console_color(int color)

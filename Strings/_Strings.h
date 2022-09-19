@@ -3,36 +3,36 @@
 
 const int EOF_RETURN = -1; 
 
-int   _strlen(const char *str);
+int   strlen_(const char *str);
 
-int   _strnlen(char *str, int maxLen);
+int   strnlen_(char *str, size_t maxLen);
 
-char *_strcpy(char *to, const char* from);
+char *strcpy_(char *to, const char* from);
 
-char *_strncpy(char *to, const char* from, int n);
+char *strncpy_(char *to, const char* from, size_t n);
 
-char *_strcat(char *to, const char *from);
+char *strcat_(char *to, const char *from);
 
-char *_strncat(char *to, char* from, int n);
+char *strncat_(char *to, char* from, size_t n);
 
-int  _strcmp(void *str1, void *str2);
+int  strcmp_(void *str1, void *str2);
 
-int  _strcmp_reverse(void *str1, void *str2);
+int  strcmp_reverse(void *str1, void *str2);
 
-char  _strncmp(const char * s1, const char* s2, int n);
+char  strncmp_(const char * s1, const char* s2, size_t n);
 
-char *_strchr(const char * str, char c);
+char *strchr_(const char * str, char c);
 
-char *_strnchr(char *str, char c, int maxLen);
+char *strnchr_(char *str, char c, size_t maxLen);
 
-char *_strdup(const char *str);
+char *strdup_(const char *str);
 
-void  _puts(const char *str, FILE *fp);
+void  puts_(const char *str, FILE *fp);
 
-int   _getline(char *line, int max, FILE *fp);
+int   getline_(char *line, size_t max, FILE *fp);
 
-bool is_russian_letter_vowel(char c);
+bool  is_russian_letter_vowel(char c);
 
-int number_syllables(const char * str);
+int   number_syllables(const char * str);
 
 #endif

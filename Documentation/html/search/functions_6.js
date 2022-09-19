@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['qsort_122',['QSORT',['../_q_s_o_r_t_8cpp.html#aef338551a4296fde19a87a14d0b98744',1,'QSORT(void *first, int number, int ElementSize, int(*comparator)(void *, void *)):&#160;QSORT.cpp'],['../_q_s_o_r_t_8h.html#aef338551a4296fde19a87a14d0b98744',1,'QSORT(void *first, int number, int ElementSize, int(*comparator)(void *, void *)):&#160;QSORT.cpp']]]
+  ['put_5ftext_5fto_5ffile_107',['put_text_to_file',['../_file_work_8cpp.html#a6b3bf825108c89073ad39ac16f208fa6',1,'put_text_to_file(const char *text, FILE *fp, size_t N):&#160;FileWork.cpp'],['../_file_work_8h.html#a6b3bf825108c89073ad39ac16f208fa6',1,'put_text_to_file(const char *text, FILE *fp, size_t N):&#160;FileWork.cpp']]],
+  ['puts_5f_108',['puts_',['../___strings_8cpp.html#ae765aaf503f2655c82d2a83b03144b01',1,'puts_(const char *str, FILE *fp):&#160;_Strings.cpp'],['../___strings_8h.html#ae765aaf503f2655c82d2a83b03144b01',1,'puts_(const char *str, FILE *fp):&#160;_Strings.cpp']]]
 ];

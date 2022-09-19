@@ -6,10 +6,10 @@ This file contains my implementation of quick sortings algorithm and functions n
 
 
 {\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include \char`\"{}QSORT.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}Strings\textbackslash{}\+\_\+\+Strings.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}Console\textbackslash{}\+Console\+Settings.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}..\textbackslash{}\+Console\textbackslash{}\+Console\+Settings.\+h\char`\"{}}\newline
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -17,7 +17,7 @@ int \mbox{\hyperlink{_q_s_o_r_t_8cpp_a7fa38f60ed4338a89fc6b411c61c6621}{comp}} (
 \item 
 void \mbox{\hyperlink{_q_s_o_r_t_8cpp_a8653862586e8585bf18b8c2992f3ef68}{normal\+\_\+swap}} (void $\ast$a, void $\ast$b, size\+\_\+t Element\+Size)
 \item 
-void \mbox{\hyperlink{_q_s_o_r_t_8cpp_aef338551a4296fde19a87a14d0b98744}{QSORT}} (void $\ast$first, int number, int Element\+Size, int($\ast$comparator)(void $\ast$, void $\ast$))
+void \mbox{\hyperlink{_q_s_o_r_t_8cpp_adeabd85f88678e939a5b53ba99bae4b4}{QSORT}} (void $\ast$first, size\+\_\+t number, size\+\_\+t Element\+Size, int($\ast$comparator)(void $\ast$, void $\ast$))
 \item 
 void \mbox{\hyperlink{_q_s_o_r_t_8cpp_ab8f4aa7543e0868e3fc824f35f8e19b8}{test\+\_\+qsort}} ()
 \item 
@@ -43,11 +43,11 @@ This file contains my implementation of quick sortings algorithm and functions n
 \doxysubsubsection{\texorpdfstring{normal\_swap()}{normal\_swap()}}
 {\footnotesize\ttfamily void normal\+\_\+swap (\begin{DoxyParamCaption}\item[{void $\ast$}]{a,  }\item[{void $\ast$}]{b,  }\item[{size\+\_\+t}]{Element\+Size }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{_q_s_o_r_t_8cpp_aef338551a4296fde19a87a14d0b98744}\label{_q_s_o_r_t_8cpp_aef338551a4296fde19a87a14d0b98744}} 
+\mbox{\Hypertarget{_q_s_o_r_t_8cpp_adeabd85f88678e939a5b53ba99bae4b4}\label{_q_s_o_r_t_8cpp_adeabd85f88678e939a5b53ba99bae4b4}} 
 \index{QSORT.cpp@{QSORT.cpp}!QSORT@{QSORT}}
 \index{QSORT@{QSORT}!QSORT.cpp@{QSORT.cpp}}
 \doxysubsubsection{\texorpdfstring{QSORT()}{QSORT()}}
-{\footnotesize\ttfamily void QSORT (\begin{DoxyParamCaption}\item[{void $\ast$}]{first,  }\item[{int}]{number,  }\item[{int}]{Element\+Size,  }\item[{int($\ast$)(void $\ast$, void $\ast$)}]{comparator }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void QSORT (\begin{DoxyParamCaption}\item[{void $\ast$}]{first,  }\item[{size\+\_\+t}]{number,  }\item[{size\+\_\+t}]{Element\+Size,  }\item[{int($\ast$)(void $\ast$, void $\ast$)}]{comparator }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{_q_s_o_r_t_8cpp_ab8f4aa7543e0868e3fc824f35f8e19b8}\label{_q_s_o_r_t_8cpp_ab8f4aa7543e0868e3fc824f35f8e19b8}} 
 \index{QSORT.cpp@{QSORT.cpp}!test\_qsort@{test\_qsort}}

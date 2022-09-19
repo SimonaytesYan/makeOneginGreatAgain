@@ -3,33 +3,33 @@
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{___strings_8h_a87c985394a2fee9420f436d21caaa689}{\+\_\+strlen}} (const char $\ast$str)
+int \mbox{\hyperlink{___strings_8h_acdfccc3d94510c151079141a732b7b51}{strlen\+\_\+}} (const char $\ast$str)
 \item 
-int \mbox{\hyperlink{___strings_8h_a2ce1ae9db65bdaa6bb58995574e3ec52}{\+\_\+strnlen}} (char $\ast$str, int max\+Len)
+int \mbox{\hyperlink{___strings_8h_a870319de1c5350184b29537bc3ff1568}{strnlen\+\_\+}} (char $\ast$str, size\+\_\+t max\+Len)
 \item 
-char $\ast$ \mbox{\hyperlink{___strings_8h_a7fffd33780b517a14fddeed0c22f0497}{\+\_\+strcpy}} (char $\ast$to, const char $\ast$from)
+char $\ast$ \mbox{\hyperlink{___strings_8h_a2f83c024152121062cfa031241e3ba32}{strcpy\+\_\+}} (char $\ast$to, const char $\ast$from)
 \item 
-char $\ast$ \mbox{\hyperlink{___strings_8h_a7bf68b9d6307f8f2e900a2342af3db37}{\+\_\+strncpy}} (char $\ast$to, const char $\ast$from, int n)
+char $\ast$ \mbox{\hyperlink{___strings_8h_a8d8b48cb4aca16f53e01ef20fc9d9eb5}{strncpy\+\_\+}} (char $\ast$to, const char $\ast$from, size\+\_\+t n)
 \item 
-char $\ast$ \mbox{\hyperlink{___strings_8h_a3c8f928e49b4595af819c7553bd4dc17}{\+\_\+strcat}} (char $\ast$to, const char $\ast$from)
+char $\ast$ \mbox{\hyperlink{___strings_8h_a213651f8c313cd713b6eb61efa2833c4}{strcat\+\_\+}} (char $\ast$to, const char $\ast$from)
 \item 
-char $\ast$ \mbox{\hyperlink{___strings_8h_a5bfa5aae931d1892787fb2439b121434}{\+\_\+strncat}} (char $\ast$to, char $\ast$from, int n)
+char $\ast$ \mbox{\hyperlink{___strings_8h_a52ca9f8d9c9954d9fcddcf4c2dca473b}{strncat\+\_\+}} (char $\ast$to, char $\ast$from, size\+\_\+t n)
 \item 
-int \mbox{\hyperlink{___strings_8h_aff19a43c11d9d02fef386645838192c7}{\+\_\+strcmp}} (void $\ast$str1, void $\ast$str2)
+int \mbox{\hyperlink{___strings_8h_af65bbf6c90b171267c12e9520903cb3c}{strcmp\+\_\+}} (void $\ast$str1, void $\ast$str2)
 \item 
-int \mbox{\hyperlink{___strings_8h_a6cfad27e3d44d394adc12796f02eb087}{\+\_\+strcmp\+\_\+reverse}} (void $\ast$str1, void $\ast$str2)
+int \mbox{\hyperlink{___strings_8h_a390a9b6ae45423c7107e9eb4d403299d}{strcmp\+\_\+reverse}} (void $\ast$str1, void $\ast$str2)
 \item 
-char \mbox{\hyperlink{___strings_8h_a9b426910f6b4cb0c6cbd84845ae88882}{\+\_\+strncmp}} (const char $\ast$s1, const char $\ast$s2, int n)
+char \mbox{\hyperlink{___strings_8h_ab7fef37beb7fb8615f89695e4aec4e7e}{strncmp\+\_\+}} (const char $\ast$s1, const char $\ast$s2, size\+\_\+t n)
 \item 
-char $\ast$ \mbox{\hyperlink{___strings_8h_ad379136ee51d77e732e7ee484978592d}{\+\_\+strchr}} (const char $\ast$str, char c)
+char $\ast$ \mbox{\hyperlink{___strings_8h_ad25099da7b11a5300d3af7eafd5faae6}{strchr\+\_\+}} (const char $\ast$str, char c)
 \item 
-char $\ast$ \mbox{\hyperlink{___strings_8h_a2ff1e96377b1ae7f3a22c93877c5710e}{\+\_\+strnchr}} (char $\ast$str, char c, int max\+Len)
+char $\ast$ \mbox{\hyperlink{___strings_8h_abf59b486cb6daf084383ee338a3fe347}{strnchr\+\_\+}} (char $\ast$str, char c, size\+\_\+t max\+Len)
 \item 
-char $\ast$ \mbox{\hyperlink{___strings_8h_a9273f56d5b82ea04df97502889d72a34}{\+\_\+strdup}} (const char $\ast$str)
+char $\ast$ \mbox{\hyperlink{___strings_8h_a725929ed6619254ad511b9c38de9d70b}{strdup\+\_\+}} (const char $\ast$str)
 \item 
-void \mbox{\hyperlink{___strings_8h_a13545edc1972e2257069e82d8e01e173}{\+\_\+puts}} (const char $\ast$str, FILE $\ast$fp)
+void \mbox{\hyperlink{___strings_8h_ae765aaf503f2655c82d2a83b03144b01}{puts\+\_\+}} (const char $\ast$str, FILE $\ast$fp)
 \item 
-int \mbox{\hyperlink{___strings_8h_a44f7f65ade41f564507436b8bc606a56}{\+\_\+getline}} (char $\ast$line, int max, FILE $\ast$fp)
+int \mbox{\hyperlink{___strings_8h_ae3f5ba161daa20bd7961654760450af0}{getline\+\_\+}} (char $\ast$line, size\+\_\+t max, FILE $\ast$fp)
 \item 
 bool \mbox{\hyperlink{___strings_8h_a16854203c8880feafe5dd4b00b278b62}{is\+\_\+russian\+\_\+letter\+\_\+vowel}} (char c)
 \item 
@@ -43,93 +43,11 @@ const int \mbox{\hyperlink{___strings_8h_a0a634a95b705357c0e0ed8101880b09c}{EOF\
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{___strings_8h_a44f7f65ade41f564507436b8bc606a56}\label{___strings_8h_a44f7f65ade41f564507436b8bc606a56}} 
-\index{\_Strings.h@{\_Strings.h}!\_getline@{\_getline}}
-\index{\_getline@{\_getline}!\_Strings.h@{\_Strings.h}}
-\doxysubsubsection{\texorpdfstring{\_getline()}{\_getline()}}
-{\footnotesize\ttfamily int \+\_\+getline (\begin{DoxyParamCaption}\item[{char $\ast$}]{line,  }\item[{int}]{max,  }\item[{FILE $\ast$}]{fp }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{___strings_8h_a13545edc1972e2257069e82d8e01e173}\label{___strings_8h_a13545edc1972e2257069e82d8e01e173}} 
-\index{\_Strings.h@{\_Strings.h}!\_puts@{\_puts}}
-\index{\_puts@{\_puts}!\_Strings.h@{\_Strings.h}}
-\doxysubsubsection{\texorpdfstring{\_puts()}{\_puts()}}
-{\footnotesize\ttfamily void \+\_\+puts (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str,  }\item[{FILE $\ast$}]{fp }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{___strings_8h_a3c8f928e49b4595af819c7553bd4dc17}\label{___strings_8h_a3c8f928e49b4595af819c7553bd4dc17}} 
-\index{\_Strings.h@{\_Strings.h}!\_strcat@{\_strcat}}
-\index{\_strcat@{\_strcat}!\_Strings.h@{\_Strings.h}}
-\doxysubsubsection{\texorpdfstring{\_strcat()}{\_strcat()}}
-{\footnotesize\ttfamily char$\ast$ \+\_\+strcat (\begin{DoxyParamCaption}\item[{char $\ast$}]{to,  }\item[{const char $\ast$}]{from }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{___strings_8h_ad379136ee51d77e732e7ee484978592d}\label{___strings_8h_ad379136ee51d77e732e7ee484978592d}} 
-\index{\_Strings.h@{\_Strings.h}!\_strchr@{\_strchr}}
-\index{\_strchr@{\_strchr}!\_Strings.h@{\_Strings.h}}
-\doxysubsubsection{\texorpdfstring{\_strchr()}{\_strchr()}}
-{\footnotesize\ttfamily char$\ast$ \+\_\+strchr (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str,  }\item[{char}]{c }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{___strings_8h_aff19a43c11d9d02fef386645838192c7}\label{___strings_8h_aff19a43c11d9d02fef386645838192c7}} 
-\index{\_Strings.h@{\_Strings.h}!\_strcmp@{\_strcmp}}
-\index{\_strcmp@{\_strcmp}!\_Strings.h@{\_Strings.h}}
-\doxysubsubsection{\texorpdfstring{\_strcmp()}{\_strcmp()}}
-{\footnotesize\ttfamily int \+\_\+strcmp (\begin{DoxyParamCaption}\item[{void $\ast$}]{str1,  }\item[{void $\ast$}]{str2 }\end{DoxyParamCaption})}
-
-\DoxyHorRuler{0}
- \hypertarget{___strings_8h_autotoc_md9}{}\doxysubsubsection{Function works like stundard, but takes into account only letters and numbers}\label{___strings_8h_autotoc_md9}
-\mbox{\Hypertarget{___strings_8h_a6cfad27e3d44d394adc12796f02eb087}\label{___strings_8h_a6cfad27e3d44d394adc12796f02eb087}} 
-\index{\_Strings.h@{\_Strings.h}!\_strcmp\_reverse@{\_strcmp\_reverse}}
-\index{\_strcmp\_reverse@{\_strcmp\_reverse}!\_Strings.h@{\_Strings.h}}
-\doxysubsubsection{\texorpdfstring{\_strcmp\_reverse()}{\_strcmp\_reverse()}}
-{\footnotesize\ttfamily int \+\_\+strcmp\+\_\+reverse (\begin{DoxyParamCaption}\item[{void $\ast$}]{str1,  }\item[{void $\ast$}]{str2 }\end{DoxyParamCaption})}
-
-\DoxyHorRuler{0}
- \hypertarget{___strings_8h_autotoc_md10}{}\doxysubsubsection{Function works like \+\_\+strcmp, but compares strings from the end}\label{___strings_8h_autotoc_md10}
-\mbox{\Hypertarget{___strings_8h_a7fffd33780b517a14fddeed0c22f0497}\label{___strings_8h_a7fffd33780b517a14fddeed0c22f0497}} 
-\index{\_Strings.h@{\_Strings.h}!\_strcpy@{\_strcpy}}
-\index{\_strcpy@{\_strcpy}!\_Strings.h@{\_Strings.h}}
-\doxysubsubsection{\texorpdfstring{\_strcpy()}{\_strcpy()}}
-{\footnotesize\ttfamily char$\ast$ \+\_\+strcpy (\begin{DoxyParamCaption}\item[{char $\ast$}]{to,  }\item[{const char $\ast$}]{from }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{___strings_8h_a9273f56d5b82ea04df97502889d72a34}\label{___strings_8h_a9273f56d5b82ea04df97502889d72a34}} 
-\index{\_Strings.h@{\_Strings.h}!\_strdup@{\_strdup}}
-\index{\_strdup@{\_strdup}!\_Strings.h@{\_Strings.h}}
-\doxysubsubsection{\texorpdfstring{\_strdup()}{\_strdup()}}
-{\footnotesize\ttfamily char$\ast$ \+\_\+strdup (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{___strings_8h_a87c985394a2fee9420f436d21caaa689}\label{___strings_8h_a87c985394a2fee9420f436d21caaa689}} 
-\index{\_Strings.h@{\_Strings.h}!\_strlen@{\_strlen}}
-\index{\_strlen@{\_strlen}!\_Strings.h@{\_Strings.h}}
-\doxysubsubsection{\texorpdfstring{\_strlen()}{\_strlen()}}
-{\footnotesize\ttfamily int \+\_\+strlen (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{___strings_8h_a5bfa5aae931d1892787fb2439b121434}\label{___strings_8h_a5bfa5aae931d1892787fb2439b121434}} 
-\index{\_Strings.h@{\_Strings.h}!\_strncat@{\_strncat}}
-\index{\_strncat@{\_strncat}!\_Strings.h@{\_Strings.h}}
-\doxysubsubsection{\texorpdfstring{\_strncat()}{\_strncat()}}
-{\footnotesize\ttfamily char$\ast$ \+\_\+strncat (\begin{DoxyParamCaption}\item[{char $\ast$}]{to,  }\item[{char $\ast$}]{from,  }\item[{int}]{n }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{___strings_8h_a2ff1e96377b1ae7f3a22c93877c5710e}\label{___strings_8h_a2ff1e96377b1ae7f3a22c93877c5710e}} 
-\index{\_Strings.h@{\_Strings.h}!\_strnchr@{\_strnchr}}
-\index{\_strnchr@{\_strnchr}!\_Strings.h@{\_Strings.h}}
-\doxysubsubsection{\texorpdfstring{\_strnchr()}{\_strnchr()}}
-{\footnotesize\ttfamily char$\ast$ \+\_\+strnchr (\begin{DoxyParamCaption}\item[{char $\ast$}]{str,  }\item[{char}]{c,  }\item[{int}]{max\+Len }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{___strings_8h_a9b426910f6b4cb0c6cbd84845ae88882}\label{___strings_8h_a9b426910f6b4cb0c6cbd84845ae88882}} 
-\index{\_Strings.h@{\_Strings.h}!\_strncmp@{\_strncmp}}
-\index{\_strncmp@{\_strncmp}!\_Strings.h@{\_Strings.h}}
-\doxysubsubsection{\texorpdfstring{\_strncmp()}{\_strncmp()}}
-{\footnotesize\ttfamily char \+\_\+strncmp (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s1,  }\item[{const char $\ast$}]{s2,  }\item[{int}]{n }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{___strings_8h_a7bf68b9d6307f8f2e900a2342af3db37}\label{___strings_8h_a7bf68b9d6307f8f2e900a2342af3db37}} 
-\index{\_Strings.h@{\_Strings.h}!\_strncpy@{\_strncpy}}
-\index{\_strncpy@{\_strncpy}!\_Strings.h@{\_Strings.h}}
-\doxysubsubsection{\texorpdfstring{\_strncpy()}{\_strncpy()}}
-{\footnotesize\ttfamily char$\ast$ \+\_\+strncpy (\begin{DoxyParamCaption}\item[{char $\ast$}]{to,  }\item[{const char $\ast$}]{from,  }\item[{int}]{n }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{___strings_8h_a2ce1ae9db65bdaa6bb58995574e3ec52}\label{___strings_8h_a2ce1ae9db65bdaa6bb58995574e3ec52}} 
-\index{\_Strings.h@{\_Strings.h}!\_strnlen@{\_strnlen}}
-\index{\_strnlen@{\_strnlen}!\_Strings.h@{\_Strings.h}}
-\doxysubsubsection{\texorpdfstring{\_strnlen()}{\_strnlen()}}
-{\footnotesize\ttfamily int \+\_\+strnlen (\begin{DoxyParamCaption}\item[{char $\ast$}]{str,  }\item[{int}]{max\+Len }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{___strings_8h_ae3f5ba161daa20bd7961654760450af0}\label{___strings_8h_ae3f5ba161daa20bd7961654760450af0}} 
+\index{\_Strings.h@{\_Strings.h}!getline\_@{getline\_}}
+\index{getline\_@{getline\_}!\_Strings.h@{\_Strings.h}}
+\doxysubsubsection{\texorpdfstring{getline\_()}{getline\_()}}
+{\footnotesize\ttfamily int getline\+\_\+ (\begin{DoxyParamCaption}\item[{char $\ast$}]{line,  }\item[{size\+\_\+t}]{max,  }\item[{FILE $\ast$}]{fp }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{___strings_8h_a16854203c8880feafe5dd4b00b278b62}\label{___strings_8h_a16854203c8880feafe5dd4b00b278b62}} 
 \index{\_Strings.h@{\_Strings.h}!is\_russian\_letter\_vowel@{is\_russian\_letter\_vowel}}
@@ -138,15 +56,105 @@ const int \mbox{\hyperlink{___strings_8h_a0a634a95b705357c0e0ed8101880b09c}{EOF\
 {\footnotesize\ttfamily bool is\+\_\+russian\+\_\+letter\+\_\+vowel (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
 
 \DoxyHorRuler{0}
- \hypertarget{___strings_8h_autotoc_md11}{}\doxysubsubsection{Function return true if c -\/ russian letter and false otherwise}\label{___strings_8h_autotoc_md11}
-\mbox{\Hypertarget{___strings_8h_a2fe0369d96daad25121da36bcc1b7704}\label{___strings_8h_a2fe0369d96daad25121da36bcc1b7704}} 
+ Function return true if c -\/ russian letter and false otherwise
+
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{___strings_8h_a2fe0369d96daad25121da36bcc1b7704}\label{___strings_8h_a2fe0369d96daad25121da36bcc1b7704}} 
 \index{\_Strings.h@{\_Strings.h}!number\_syllables@{number\_syllables}}
 \index{number\_syllables@{number\_syllables}!\_Strings.h@{\_Strings.h}}
 \doxysubsubsection{\texorpdfstring{number\_syllables()}{number\_syllables()}}
 {\footnotesize\ttfamily int number\+\_\+syllables (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
 
 \DoxyHorRuler{0}
- \hypertarget{___strings_8h_autotoc_md12}{}\doxysubsubsection{Function return true number of syllables in the str}\label{___strings_8h_autotoc_md12}
+ Function return true number of syllables in the str
+
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{___strings_8h_ae765aaf503f2655c82d2a83b03144b01}\label{___strings_8h_ae765aaf503f2655c82d2a83b03144b01}} 
+\index{\_Strings.h@{\_Strings.h}!puts\_@{puts\_}}
+\index{puts\_@{puts\_}!\_Strings.h@{\_Strings.h}}
+\doxysubsubsection{\texorpdfstring{puts\_()}{puts\_()}}
+{\footnotesize\ttfamily void puts\+\_\+ (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str,  }\item[{FILE $\ast$}]{fp }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{___strings_8h_a213651f8c313cd713b6eb61efa2833c4}\label{___strings_8h_a213651f8c313cd713b6eb61efa2833c4}} 
+\index{\_Strings.h@{\_Strings.h}!strcat\_@{strcat\_}}
+\index{strcat\_@{strcat\_}!\_Strings.h@{\_Strings.h}}
+\doxysubsubsection{\texorpdfstring{strcat\_()}{strcat\_()}}
+{\footnotesize\ttfamily char$\ast$ strcat\+\_\+ (\begin{DoxyParamCaption}\item[{char $\ast$}]{to,  }\item[{const char $\ast$}]{from }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{___strings_8h_ad25099da7b11a5300d3af7eafd5faae6}\label{___strings_8h_ad25099da7b11a5300d3af7eafd5faae6}} 
+\index{\_Strings.h@{\_Strings.h}!strchr\_@{strchr\_}}
+\index{strchr\_@{strchr\_}!\_Strings.h@{\_Strings.h}}
+\doxysubsubsection{\texorpdfstring{strchr\_()}{strchr\_()}}
+{\footnotesize\ttfamily char$\ast$ strchr\+\_\+ (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str,  }\item[{char}]{c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{___strings_8h_af65bbf6c90b171267c12e9520903cb3c}\label{___strings_8h_af65bbf6c90b171267c12e9520903cb3c}} 
+\index{\_Strings.h@{\_Strings.h}!strcmp\_@{strcmp\_}}
+\index{strcmp\_@{strcmp\_}!\_Strings.h@{\_Strings.h}}
+\doxysubsubsection{\texorpdfstring{strcmp\_()}{strcmp\_()}}
+{\footnotesize\ttfamily int strcmp\+\_\+ (\begin{DoxyParamCaption}\item[{void $\ast$}]{str1,  }\item[{void $\ast$}]{str2 }\end{DoxyParamCaption})}
+
+\DoxyHorRuler{0}
+ Function works like stundard, but takes into account only letters and numbers
+
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{___strings_8h_a390a9b6ae45423c7107e9eb4d403299d}\label{___strings_8h_a390a9b6ae45423c7107e9eb4d403299d}} 
+\index{\_Strings.h@{\_Strings.h}!strcmp\_reverse@{strcmp\_reverse}}
+\index{strcmp\_reverse@{strcmp\_reverse}!\_Strings.h@{\_Strings.h}}
+\doxysubsubsection{\texorpdfstring{strcmp\_reverse()}{strcmp\_reverse()}}
+{\footnotesize\ttfamily int strcmp\+\_\+reverse (\begin{DoxyParamCaption}\item[{void $\ast$}]{str1,  }\item[{void $\ast$}]{str2 }\end{DoxyParamCaption})}
+
+\DoxyHorRuler{0}
+ Function works like \+\_\+strcmp, but compares strings from the end
+
+\DoxyHorRuler{0}
+ \mbox{\Hypertarget{___strings_8h_a2f83c024152121062cfa031241e3ba32}\label{___strings_8h_a2f83c024152121062cfa031241e3ba32}} 
+\index{\_Strings.h@{\_Strings.h}!strcpy\_@{strcpy\_}}
+\index{strcpy\_@{strcpy\_}!\_Strings.h@{\_Strings.h}}
+\doxysubsubsection{\texorpdfstring{strcpy\_()}{strcpy\_()}}
+{\footnotesize\ttfamily char$\ast$ strcpy\+\_\+ (\begin{DoxyParamCaption}\item[{char $\ast$}]{to,  }\item[{const char $\ast$}]{from }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{___strings_8h_a725929ed6619254ad511b9c38de9d70b}\label{___strings_8h_a725929ed6619254ad511b9c38de9d70b}} 
+\index{\_Strings.h@{\_Strings.h}!strdup\_@{strdup\_}}
+\index{strdup\_@{strdup\_}!\_Strings.h@{\_Strings.h}}
+\doxysubsubsection{\texorpdfstring{strdup\_()}{strdup\_()}}
+{\footnotesize\ttfamily char$\ast$ strdup\+\_\+ (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{___strings_8h_acdfccc3d94510c151079141a732b7b51}\label{___strings_8h_acdfccc3d94510c151079141a732b7b51}} 
+\index{\_Strings.h@{\_Strings.h}!strlen\_@{strlen\_}}
+\index{strlen\_@{strlen\_}!\_Strings.h@{\_Strings.h}}
+\doxysubsubsection{\texorpdfstring{strlen\_()}{strlen\_()}}
+{\footnotesize\ttfamily int strlen\+\_\+ (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{___strings_8h_a52ca9f8d9c9954d9fcddcf4c2dca473b}\label{___strings_8h_a52ca9f8d9c9954d9fcddcf4c2dca473b}} 
+\index{\_Strings.h@{\_Strings.h}!strncat\_@{strncat\_}}
+\index{strncat\_@{strncat\_}!\_Strings.h@{\_Strings.h}}
+\doxysubsubsection{\texorpdfstring{strncat\_()}{strncat\_()}}
+{\footnotesize\ttfamily char$\ast$ strncat\+\_\+ (\begin{DoxyParamCaption}\item[{char $\ast$}]{to,  }\item[{char $\ast$}]{from,  }\item[{size\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{___strings_8h_abf59b486cb6daf084383ee338a3fe347}\label{___strings_8h_abf59b486cb6daf084383ee338a3fe347}} 
+\index{\_Strings.h@{\_Strings.h}!strnchr\_@{strnchr\_}}
+\index{strnchr\_@{strnchr\_}!\_Strings.h@{\_Strings.h}}
+\doxysubsubsection{\texorpdfstring{strnchr\_()}{strnchr\_()}}
+{\footnotesize\ttfamily char$\ast$ strnchr\+\_\+ (\begin{DoxyParamCaption}\item[{char $\ast$}]{str,  }\item[{char}]{c,  }\item[{size\+\_\+t}]{max\+Len }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{___strings_8h_ab7fef37beb7fb8615f89695e4aec4e7e}\label{___strings_8h_ab7fef37beb7fb8615f89695e4aec4e7e}} 
+\index{\_Strings.h@{\_Strings.h}!strncmp\_@{strncmp\_}}
+\index{strncmp\_@{strncmp\_}!\_Strings.h@{\_Strings.h}}
+\doxysubsubsection{\texorpdfstring{strncmp\_()}{strncmp\_()}}
+{\footnotesize\ttfamily char strncmp\+\_\+ (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s1,  }\item[{const char $\ast$}]{s2,  }\item[{size\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{___strings_8h_a8d8b48cb4aca16f53e01ef20fc9d9eb5}\label{___strings_8h_a8d8b48cb4aca16f53e01ef20fc9d9eb5}} 
+\index{\_Strings.h@{\_Strings.h}!strncpy\_@{strncpy\_}}
+\index{strncpy\_@{strncpy\_}!\_Strings.h@{\_Strings.h}}
+\doxysubsubsection{\texorpdfstring{strncpy\_()}{strncpy\_()}}
+{\footnotesize\ttfamily char$\ast$ strncpy\+\_\+ (\begin{DoxyParamCaption}\item[{char $\ast$}]{to,  }\item[{const char $\ast$}]{from,  }\item[{size\+\_\+t}]{n }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{___strings_8h_a870319de1c5350184b29537bc3ff1568}\label{___strings_8h_a870319de1c5350184b29537bc3ff1568}} 
+\index{\_Strings.h@{\_Strings.h}!strnlen\_@{strnlen\_}}
+\index{strnlen\_@{strnlen\_}!\_Strings.h@{\_Strings.h}}
+\doxysubsubsection{\texorpdfstring{strnlen\_()}{strnlen\_()}}
+{\footnotesize\ttfamily int strnlen\+\_\+ (\begin{DoxyParamCaption}\item[{char $\ast$}]{str,  }\item[{size\+\_\+t}]{max\+Len }\end{DoxyParamCaption})}
+
 
 
 \doxysubsection{Variable Documentation}

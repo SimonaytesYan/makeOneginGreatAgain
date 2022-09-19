@@ -9,8 +9,10 @@
 * \brief 
 * This file contains implementation of standard string functions
 */
-int _strlen(const char *str) 
+int strlen_(const char *str) 
 {
+    assert(str != nullptr);
+
     int n = 0;
     while (str[n] != '\0')
         n++;
@@ -18,8 +20,11 @@ int _strlen(const char *str)
     return n;
 }
 
-char *_strcpy(char *to, const char *from) 
+char *strcpy_(char *to, const char *from) 
 {
+    assert(to   != nullptr);
+    assert(from != nullptr);
+    
     int n = 0;
     while (from[n] != '\0')
     {
@@ -31,9 +36,12 @@ char *_strcpy(char *to, const char *from)
     return to;
 }
 
-char *_strcat(char *to, const char *from) 
+char *strcat_(char *to, const char *from) 
 {
-	int to_len = _strlen(to);
+    assert(to   != nullptr);
+    assert(from != nullptr);
+
+	int to_len = strlen_(to);
     int i = 0;
     while (from[i] != '\0')
     {    
@@ -45,8 +53,10 @@ char *_strcat(char *to, const char *from)
     return to;
 }
 
-char *_strchr(const char * str, char c) 
+char *strchr_(const char * str, char c) 
 {
+    assert(str != nullptr);
+    
     int i = 0;
     char * answer = nullptr;
 
@@ -60,8 +70,10 @@ char *_strchr(const char * str, char c)
     return nullptr;
 }
 
-int _strnlen(char *str, int maxLen) 
+int strnlen_(char *str, size_t maxLen) 
 {
+    assert(str != nullptr);
+    
     int n = 0;
     while (str[n] != '\0' && n < maxLen)
         n++;
@@ -69,8 +81,11 @@ int _strnlen(char *str, int maxLen)
     return n;
 }
 
-char *_strncpy(char *to,const char* from, int n) 
+char *strncpy_(char *to,const char* from, size_t n) 
 {
+    assert(to   != nullptr);
+    assert(from != nullptr);
+    
     int index = 0;
     while (from[index] != '\0' && index < n) 
     {
@@ -82,12 +97,15 @@ char *_strncpy(char *to,const char* from, int n)
     return to;
 }
 
-char *_strncat(char *to, char *from, int n) 
+char *strncat_(char *to, char *from, size_t n) 
 {
+    assert(to   != nullptr);
+    assert(from != nullptr);
+    
     if (n < 0)
         n = 0;
 
-    int len_to = _strlen(to);
+    int len_to = strlen_(to);
 
     int index = 0;
     while (from[index] != '\0' && index < n)
@@ -100,8 +118,10 @@ char *_strncat(char *to, char *from, int n)
     return to;
 }
 
-char *_strnchr(char *str, char c, int maxLen) 
+char *strnchr_(char *str, char c, size_t maxLen) 
 {
+    assert(str != nullptr);
+    
     int i = 0;
     char* answer;
     while (i < maxLen && str[i] != '\0')
@@ -114,9 +134,11 @@ char *_strnchr(char *str, char c, int maxLen)
     return nullptr;
 }
 
-char *_strdup(const char *str)
+char *strdup_(const char *str)
 {
-    int str_len = _strlen((char*)str);    
+    assert(str != nullptr);
+    
+    int str_len = strlen_((char*)str);    
     char *duplicate = (char *)calloc(str_len + 1, sizeof(char));
 
     for(int i = 0; i < str_len; i++)
@@ -128,9 +150,13 @@ char *_strdup(const char *str)
 }
 //!------------------------
 //!Function works like stundard, but takes into account only letters and numbers 
+//!
 //!-------------------------
-int _strcmp(void *str1, void *str2)
+int strcmp_(void *str1, void *str2)
 {
+    assert(str1 != nullptr);
+    assert(str2 != nullptr);
+    
     const char * s1 = *(const char**)str1; 
     const char * s2 = *(const char**)str2;
 
@@ -150,7 +176,7 @@ int _strcmp(void *str1, void *str2)
         }
         
         if (s1[n1] != s2[n2])
-            return s1[n1] - s2[n2];
+            return (int)s1[n1] - (int)s2[n2];
 
         n1++;
         n2++;
@@ -161,14 +187,18 @@ int _strcmp(void *str1, void *str2)
     while (!isalnum((unsigned char)s2[n1]) && s2[n2] != '\0')
         n2++;
     
-    return s1[n1] - s2[n2];
+    return (int)s1[n1] - (int)s2[n2];
 }
 
 //!------------------------
 //!Function works like _strcmp, but compares strings from the end
+//!
 //!-------------------------
-int _strcmp_reverse(void *str1, void *str2)
+int strcmp_reverse(void *str1, void *str2)
 {
+    assert(str1 != nullptr);
+    assert(str2 != nullptr);
+
     const char *s1 = *(const char**)str1;
     const char *s2 = *(const char**)str2;
     
@@ -215,8 +245,11 @@ int _strcmp_reverse(void *str1, void *str2)
 }
 
 
-char  _strncmp(const char * s1, const char* s2, int n)
+char  strncmp_(const char * s1, const char* s2, size_t n)
 {
+    assert(s1 != nullptr);
+    assert(s2 != nullptr);
+
     int index = 0;
 
     while (s1[index] && s2[index] && index < n - 1)
@@ -232,11 +265,14 @@ char  _strncmp(const char * s1, const char* s2, int n)
     return s1[index] - s2[index];
 }
 
-void _puts(const char *str, FILE *fp)
+void puts_(const char *str, FILE *fp)
 {   
+    assert(str != nullptr);
+    assert(fp  != nullptr);
+    
     if (str == NULL)
     {
-        _puts("(null)", fp);
+        puts_("(null)", fp);
         return;
     }
     assert(fp != NULL);
@@ -250,10 +286,13 @@ void _puts(const char *str, FILE *fp)
     putc('\n', fp);
 }
 
-int _getline(char *line, int max, FILE* fp)
+int getline_(char *line, size_t max, FILE* fp)
 {
+    assert(line != nullptr);
+    assert(fp   != nullptr);
+
     int n = 0;
-    short c = 0;
+    int c = 0;
     while ((c = getc(fp)) != '\n' && c != EOF  && n < max)
     {
         line[n] = c;
@@ -268,6 +307,7 @@ int _getline(char *line, int max, FILE* fp)
 
 //!------------------------
 //!Function return true if c - russian letter and false otherwise
+//!
 //!-------------------------
 bool is_russian_letter_vowel(char c)
 {
@@ -295,9 +335,12 @@ bool is_russian_letter_vowel(char c)
 
 //!------------------------
 //!Function return true number of syllables in the str
+//!
 //!-------------------------
-int number_syllables(const char * str)
+int number_syllables(const char *str)
 {
+    assert(str != nullptr);
+    
     assert(str != nullptr);
     int number = 0;
 
