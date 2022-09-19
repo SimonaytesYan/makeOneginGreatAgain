@@ -1,9 +1,9 @@
 # Make Onegin greate again project
  ___
- Executable file - Start.exe
+ Executable file - Start.exe\\
  To recompile program print "make" in CMD 
  ___
- You should work with all files in Windows 1251 encoding.
+ You should work with all files in Windows 1251 encoding.\\
  It is important to program performance
  ____
  This program take text from READ_FROM constant, 
